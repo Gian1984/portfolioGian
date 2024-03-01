@@ -19,6 +19,7 @@ import { AcademicCapIcon,
 </script>
 
 <script>
+
 import emailjs from '@emailjs/browser';
 export default {
 
@@ -56,16 +57,22 @@ export default {
         people(){
             return [
                 {
-                    name: 'Belga Mobility',
-                    role: 'Luxury car rental service with a private driver',
-                    imageUrl:'./img/logos/BELGA-MOBILITY.png',
-                    href:'https://belgamobility.com/',
-                },
-                {
                     name: 'Claudio Fava',
                     role: 'Architect',
                     imageUrl:'./img/logos/logo_fava_border.png',
                     href: 'https://www.favaclaudio.com/'
+                },
+                {
+                  name: 'Undiscover.me',
+                  role: 'Make sure your new website shows the best of you',
+                  imageUrl:'./img/logos/undiscoverme.png',
+                  href:'https://www.undiscover.me/',
+                },
+                {
+                  name: 'Belga Mobility',
+                  role: 'Luxury car rental service with a private driver',
+                  imageUrl:'./img/logos/BELGA-MOBILITY.png',
+                  href:'https://belgamobility.com/',
                 },
                 {
                     name: 'Pizza Vino',
