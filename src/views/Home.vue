@@ -117,8 +117,14 @@ export default {
                   href:'https://www.unikpools.com/',
                 },
                 {
+                  name: 'Colonel Gustave',
+                  role: 'Croquettes saines pour chiens et chats',
+                  imageUrl:'./img/logos/colonel.png',
+                  href:'https://www.colonelgustave.com/',
+                },
+                {
                   name: 'L\'Artigiano della farina',
-                  role: 'la création de pains et de pizzas.',
+                  role: 'La création de pains et de pizzas.',
                   imageUrl:'./img/logos/logoartigiano.png',
                   href:'https://www.artigianodellafarina.be/',
                 },
