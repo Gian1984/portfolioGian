@@ -105,16 +105,28 @@ export default {
                     href:'https://www.quendra.com/',
                 },
                 {
+                  name: 'Bioholistic',
+                  role: 'Belgian group at the service of health',
+                  imageUrl:'./img/logos/logoBio.png',
+                  href:'https://www.bioholistic.be/',
+                },
+                {
+                  name: 'Unikpools',
+                  role: 'Exclusive swimming pool',
+                  imageUrl:'./img/logos/unik.png',
+                  href:'https://www.unikpools.com/',
+                },
+                {
+                  name: 'L\'Artigiano della farina',
+                  role: 'la création de pains et de pizzas.',
+                  imageUrl:'./img/logos/logoartigiano.png',
+                  href:'https://www.artigianodellafarina.be/',
+                },
+                {
                     name: 'Odette en Ville',
                     role: 'Hotel-restaurant',
                     imageUrl:'./img/logos/odette.png',
                     href:'https://www.odetteenville.be/',
-                },
-                {
-                    name: 'Unikpools',
-                    role: 'Exclusive swimming pool',
-                    imageUrl:'./img/logos/unik.png',
-                    href:'https://www.unikpools.com/',
                 },
                 {
                     name: 'Brusano',
