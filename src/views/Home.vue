@@ -565,7 +565,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="relative bg-indigo-800">
+        <div class="relative bg-indigo-800 pt-24">
             <div class="absolute inset-0">
                 <img class="w-full h-full object-cover" src="../assets/letyoudev.webp" alt="lettudev" />
             </div>
@@ -579,8 +579,8 @@ export default {
                 </a>
             </div>
         </div>
-        <div class="mx-auto items-center justify-center text-center p-3" style="background-color: #5e17eb !important;">
-            <a href="https://letudev.com/" target="_blank" class="flex w-40 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 mx-auto block lg:hidden">
+        <div class="mx-auto items-center justify-center text-center p-3">
+            <a href="https://letudev.com/" target="_blank" class="w-40 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 mx-auto block lg:hidden">
                 <p class="flex">
                     <span class="flex mt-0.5">New project</span>
                     <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
