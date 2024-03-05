@@ -87,6 +87,12 @@ export default {
                     href:'https://letudev.com/',
                 },
                 {
+                  name: 'Magritte',
+                  role: 'Plongez dans l’univers surréaliste de René Magritte',
+                  imageUrl:'./img/logos/magrittelogo.png',
+                  href:'https://magritte.com/',
+                },
+                {
                     name: 'Panoptès',
                     role: 'Art collection',
                     imageUrl:'./img/logos/panoptes.png',
