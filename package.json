@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
+    "@headlessui/vue": "^1.7.19",
     "@heroicons/vue": "^2.1.1",
     "@vue-hero-icons/solid": "^1.7.2",
     "gsap": "^3.12.5",

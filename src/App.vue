@@ -2,6 +2,20 @@
 import {defineComponent, h} from "vue";
 import gsap from 'gsap'
 
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+
+const navigation = [
+  { name: 'Kind of', href: '#' },
+  { name: 'Skills', href: '#' },
+  { name: 'At work', href: '#' },
+  { name: 'Projects', href: '#' },
+  { name: 'Contact', href: '#' },
+]
+
+const mobileMenuOpen = ref(false)
+
 
 const footerNavigation = {
     social: [
@@ -71,6 +85,11 @@ const beforeEnter = (el) => {
     el.style.transform = 'translateX(-400px)'
 }
 
+const beforeRight = (el) => {
+  el.style.opacity = 0
+  el.style.transform = 'translateX(400px)'
+}
+
 const enter = (el, done) => {
     gsap.to(el, {
         opacity: 1,
@@ -103,72 +122,80 @@ const slide = (el, done) => {
 </script>
 
 <template>
-
-    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
-        <div class="absolute inset-0 bg-gray-600">
-            <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.44841121738!2d4.305377849792255!3d50.855211410206046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBruxelles%2C%20Belgique!5e0!3m2!1sfr!2sit!4v1650206261181!5m2!1sfr!2sit' style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Gianluca Tiengo Web Devel0per</span>
+          <transition
+              appear
+              @before-enter="beforeSlide"
+              @enter="slide"
+          >
+          <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.png" alt="Gianluca Tiengo Web Developer Logo" />
+          </transition>
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
+          <span class="sr-only">Open main menu</span>
+          <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+      <div class="fixed inset-0 z-50" />
+      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.png" alt="Gianluca Tiengo Web Developer Logo" />
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+            <span class="sr-only">Close menu</span>
+            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+          </button>
         </div>
-        <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-            <div class="mx-auto max-w-7xl lg:px-8">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-                    <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                        <div class="lg:py-24">
-                            <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                                <transition
-                                    appear
-                                    @before-enter="beforeEnter"
-                                    @enter="enter"
-                                >
-                                    <span class="block text-pink-700">Gianluca Tiengo</span>
-                                </transition>
-                                <transition
-                                    appear
-                                    @before-enter="beforeEnter"
-                                    @enter="enter"
-                                >
-                                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-400 sm:pb-5"> Web Developer</span>
-                                </transition>
-                            </h1>
-                            <p class="text-base text-black text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                                I'm a web developer from Turin, Italy and currently living in Brussels. I enjoy building everything from small business to rich interactive apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="mailto:gl.tiengo@gmail.com" class="text-teal-500">here</a>.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                        <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                            <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-                            <transition
-                                appear
-                                @before-enter="beforeSlide"
-                                @enter="slide"
-                            >
-                                <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="./assets/Illustration.svg" alt="" />
-                            </transition>
-                        </div>
-                    </div>
-                </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
             </div>
+            <div class="py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+            </div>
+          </div>
         </div>
-        <div
-            class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-            style="height: 70px;"
-        >
-            <svg
-                class="absolute bottom-0 overflow-hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                version="1.1"
-                viewBox="0 0 2560 100"
-                x="0"
-                y="0"
-            >
-                <polygon
-                    class="text-gray-300 fill-current"
-                    points="2560 0 2560 100 0 100"
-                ></polygon>
-            </svg>
-        </div>
+      </DialogPanel>
+    </Dialog>
+  </header>
+
+  <div class="bg-white">
+    <div class="mx-auto px-6 py-40 sm:py-80 lg:px-8">
+      <transition
+          appear
+          @before-enter="beforeEnter"
+          @enter="enter"
+      >
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-8xl">Gianluca Tiengo<br/>Web Developer</h1>
+      </transition>
+      <transition
+          appear
+          @before-enter="beforeRight"
+          @enter="enter"
+      >
+      <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
+        I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-teal-500">here</a>.
+      </h2>
+      </transition>
     </div>
+  </div>
 
 
     <router-view/>
