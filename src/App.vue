@@ -145,9 +145,7 @@ const slide = (el, done) => {
       <div class="hidden lg:flex lg:gap-x-12">
         <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-50" />
@@ -167,9 +165,6 @@ const slide = (el, done) => {
             <div class="space-y-2 py-6">
               <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
             </div>
-            <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-            </div>
           </div>
         </div>
       </DialogPanel>
@@ -177,7 +172,7 @@ const slide = (el, done) => {
   </header>
 
   <div class="bg-white">
-    <div class="mx-auto px-6 py-40 sm:py-80 lg:px-8">
+    <div class="mx-auto px-6 py-40 sm:pt-80 sm:pb-40 lg:px-8">
       <transition
           appear
           @before-enter="beforeEnter"
@@ -191,7 +186,7 @@ const slide = (el, done) => {
           @enter="enter"
       >
       <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
-        I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-teal-500">here</a>.
+        I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.
       </h2>
       </transition>
     </div>
@@ -200,31 +195,12 @@ const slide = (el, done) => {
 
     <router-view/>
 
-        <footer class="relative bg-gray-300 pt-8 pb-6">
-            <div
-                    class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-                    style="height: 80px;"
-            >
-                <svg
-                        class="absolute bottom-0 overflow-hidden"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                        version="1.1"
-                        viewBox="0 0 2560 100"
-                        x="0"
-                        y="0"
-                >
-                    <polygon
-                            class="text-gray-300 fill-current"
-                            points="2560 0 2560 100 0 100"
-                    ></polygon>
-                </svg>
-            </div>
-            <div class="container mx-auto px-4">
+        <footer class="relative bg-white pt-24 pb-6">
+            <div class="px-4">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-6/12 px-4">
-                        <h4 class="text-3xl font-semibold">Want to know more about?</h4>
-                        <h5 class="text-lg mt-0 mb-2 text-gray-700">
+                        <h4 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to know more about?</h4>
+                        <h5 class="text-3xl font-semibold tracking-tight text-gray-900">
                             Follow me!
                         </h5>
                         <div class="my-6 text-center">
@@ -240,10 +216,10 @@ const slide = (el, done) => {
                         <div class="flex flex-wrap items-top mb-6"></div>
                     </div>
                 </div>
-                <hr class="my-6 border-gray-400" />
+                <hr class="my-6 border-gray-900" />
                 <div class="flex flex-wrap items-center md:justify-between justify-center" >
                     <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                        <div class="text-sm text-gray-600 font-semibold py-1">
+                        <div class="text-sm text-gray-900 font-semibold py-1">
                             Copyright © 2024 Gianluca Tiengo.
                         </div>
                     </div>
