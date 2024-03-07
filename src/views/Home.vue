@@ -7,14 +7,30 @@ import { AcademicCapIcon,
     BeakerIcon,
     ClockIcon,
     ArrowRightIcon,
-    SparklesIcon,
-    FireIcon,
-    BellIcon,
     CheckCircleIcon,
     XCircleIcon,
 } from '@heroicons/vue/24/solid'
+import gsap from "gsap";
 
+const beforeEnter = (el) => {
+  el.style.opacity = 0
+  el.style.transform = 'translateX(-400px)'
+}
 
+const beforeRight = (el) => {
+  el.style.opacity = 0
+  el.style.transform = 'translateX(400px)'
+}
+
+const enter = (el, done) => {
+  gsap.to(el, {
+    opacity: 1,
+    x: 0,
+    duration: 1.5,
+    onComplete: done,
+    delay: el.dataset.index * 0.5,
+  })
+}
 
 </script>
 
@@ -22,6 +38,8 @@ import { AcademicCapIcon,
 
 import emailjs from '@emailjs/browser';
 export default {
+
+
 
     computed: {
         galleries() {
@@ -47,10 +65,14 @@ export default {
                     name: 'TailwindCss',
                     imageSrc: './img/logos/tailwind.png'
                 },
+              {
+                name: 'TailwindCss',
+                imageSrc: './img/logos/wordpress.png'
+              },
             ]
         },
 
-        people(){
+      projects(){
             return [
                 {
                     name: 'Claudio Fava',
@@ -189,7 +211,7 @@ export default {
 
         },
 
-        blogPosts(){
+        staeps(){
             return  [
                 {
                     id: 1,
@@ -273,12 +295,32 @@ export default {
 </script>
 <template>
 
-    <div class="bg-white py-24 sm:py-24">
+    <div class="bg-white">
+      <div class="mx-auto px-6 pt-60 pb-20 sm:pt-80 sm:pb-40 lg:px-8">
+        <transition
+            appear
+            @before-enter="beforeEnter"
+            @enter="enter"
+        >
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Gianluca Tiengo<br/>Web Developer</h1>
+        </transition>
+        <transition
+            appear
+            @before-enter="beforeRight"
+            @enter="enter"
+        >
+          <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
+            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.
+          </h2>
+        </transition>
+      </div>
+    </div>
+
+    <div class="bg-white pt-12 pb-10 sm:py-24">
       <div class="mx-auto px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="lg:pr-4 mx-auto">
             <div class="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-              <img class="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0" src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80" alt="" />
               <div class="absolute inset-0 bg-gray-900 mix-blend-multiply" />
 
               <figure class="relative isolate">
@@ -286,7 +328,7 @@ export default {
                   <path id="0ef284b8-28c2-426e-9442-8655d393522e" d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z" />
                   <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x="86" />
                 </svg>
-                <figcaption class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl text-white">Ambition<br> & Integrity</figcaption>
+                <figcaption class="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-white">Ambition<br> & Integrity</figcaption>
                 <blockquote class="mt-6 text-xl font-semibold leading-8 text-white">
                   <p>I approach every challenge with energy and vigour. I come up with innovative solutions and I'm not afraid to think big. I care about my work, my clients and my people. I treat everyone with honesty and respect and expect to be treated in the same way.</p>
                 </blockquote>
@@ -295,9 +337,9 @@ export default {
           </div>
           <div>
             <div class="text-base leading-7 text-gray-700">
-              <h2 class="mt-2 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
+              <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6x">I'm a web developer from Turin, Italy and currently living in Brussels. I enjoy building everything from small business to rich interactive apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.</p>
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I'm a web developer from Turin, Italy and currently living in Brussels. I enjoy building everything from small business to rich interactive apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.</p>
                 <p class="mt-8 text-xl leading-8 text-black">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTMl, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
                 <p class="mt-8 text-xl leading-8 text-black">As developer I understand the importance to share knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
               </div>
@@ -307,11 +349,11 @@ export default {
       </div>
     </div>
 
-    <div class="overflow-hidden bg-white py-24 sm:py-32">
+    <div class="overflow-hidden bg-white py-10 sm:py-32">
       <div class="mx-auto max-w-full px-6 lg:flex lg:px-8">
         <div class="mx-auto grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-5xl lg:pb-8 ">
-            <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+            <h2 id="kindof" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Websites - Ecommerce<br>Web Application
             </h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6x">
@@ -331,7 +373,7 @@ export default {
                   data-fancybox="gallery"
                   data-caption="https://www.favaclaudio.com/"
               >
-                <img src="../assets/favascreen.webp" alt="https://www.favaclaudio.com/" class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+                <img src="../assets/favascreen.webp" alt="https://www.favaclaudio.com/" class="aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover" />
               </a>
             </div>
             <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
@@ -341,7 +383,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://www.bioholistic.be/"
                 >
-                  <img src="../assets/bioscreen.webp" alt="https://www.bioholistic.be/" class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+                  <img src="../assets/bioscreen.webp" alt="https://www.bioholistic.be/" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" />
                 </a>
               </div>
               <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
@@ -350,7 +392,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://magritte.com/"
                 >
-                  <img src="../assets/magrittescreen.webp" alt="https://magritte.com/" class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+                  <img src="../assets/magrittescreen.webp" alt="https://magritte.com/" class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50 object-cover" />
                 </a>
               </div>
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
@@ -359,7 +401,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://www.colonelgustave.com/"
                 >
-                <img src="../assets/colonelscreen.webp" alt="https://www.colonelgustave.com/" class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+                <img src="../assets/colonelscreen.webp" alt="https://www.colonelgustave.com/" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" />
                 </a>
               </div>
             </div>
@@ -368,30 +410,28 @@ export default {
       </div>
     </div>
 
-    <div class="relative py-24 sm:py-32">
-      <div class="relative bg-white py-10 sm:py-10 lg:py-10">
-        <div class="mx-auto px-4 text-right sm:px-6 lg:px-8">
-          <h2 class="mt-2 mb-2 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-            Everything you need<br> to deploy your app
-          </h2>
-          <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-gray-900">
-            My approach to website development fuses creativity,<br> technology and data analysis,<br> giving you the platform you.
-          </p>
-          <div class="mt-12">
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div v-for="feature in features" :key="feature.name" class="pt-6">
-                <div class="flow-root rounded-lg shadow-lg rounded-lg px-6 pb-8">
-                  <div class="-mt-6">
-                    <div>
+    <div class="relative py-12 sm:py-32">
+      <div class="mx-auto px-4 text-right sm:px-6 lg:px-8">
+        <h2 id="atwork" class="mt-2 mb-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Everything you need<br> to deploy your app
+        </h2>
+        <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-gray-900">
+          My approach to website development fuses creativity,<br> technology and data analysis,<br> giving you the platform you.
+        </p>
+        <div class="mt-12">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div v-for="feature in features" :key="feature.name" class="pt-6">
+              <div class="flow-root rounded-lg shadow-lg rounded-lg px-6 pb-8">
+                <div class="-mt-6">
+                  <div>
                                           <span class="inline-flex items-center justify-center p-3 bg-black rounded-md shadow-lg">
                                             <component :is="feature.icon" class="h-12 w-12 text-pink-500" aria-hidden="true" />
                                           </span>
-                    </div>
-                    <h3 class="mt-8 text-3xl font-semibold tracking-tight text-gray-900">{{ feature.name }}</h3>
-                    <p class="mt-5 mb-4 text-xl leading-8 text-black-600">
-                      {{ feature.description }}
-                    </p>
                   </div>
+                  <h3 class="mt-8 text-3xl font-semibold tracking-tight text-gray-900">{{ feature.name }}</h3>
+                  <p class="mt-5 mb-4 text-xl leading-8 text-black-600">
+                    {{ feature.description }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -401,112 +441,106 @@ export default {
     </div>
 
 
-  <div class="bg-black py-16 sm:py-16">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-        <div v-for="category in galleries" :key="category.name">
-        <img class="col-span-2 max-h-64 w-full object-contain lg:col-span-1" :src="category.imageSrc" :alt="category.name" width="158" height="48" />
+
+    <div class="bg-gray-900 py-12 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
+          <div v-for="category in galleries" :key="category.name" class="bg-white/5 p-8 sm:p-10">
+            <img class="max-h-24 w-full object-contain" :src="category.imageSrc" :alt="category.name" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-    <div class="relative pt-1 sm:pt-1 sm:pb-32 pb-24">
-        <!-- Blog section -->
-        <div class="relative bg-gray-white py-10 sm:py-10 lg:py-10">
-            <div class="relative">
-              <div class="relative isolate">
-                <div class="overflow-hidden">
-                  <div class="px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-                    <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                      <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
-                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h1>
-                        <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:max-w-md lg:max-w-none">Depending on the type of project, the basic steps of building a website can vary. Not all websites are the same. Different types of management and planning are required.</p>
-                        <div v-for="post in blogPosts" :key="post.id">
-                          <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                            <div class="flex-1">
+      <div class="relative isolate">
+        <div class="overflow-hidden">
+          <div class="px-6 pb-12 pt-12 sm:pt-60 lg:px-8 lg:pt-32">
+            <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+              <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h1>
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:max-w-md lg:max-w-none">Depending on the type of project, the basic steps of building a website can vary. Not all websites are the same. Different types of management and planning are required.</p>
+                <div v-for="step in staeps" :key="step.id">
+                  <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
 
-                                <p class="text-3xl font-semibold tracking-tight text-gray-900">
-                                  {{ post.title }}
-                                </p>
-                                <p class="mt-3 text-xl leading-8 text-black-600">
-                                  {{ post.preview }}
-                                </p>
+                      <p class="text-3xl font-semibold tracking-tight text-gray-900">
+                        {{ step.title }}
+                      </p>
+                      <p class="mt-3 text-xl leading-8 text-black-600">
+                        {{ step.preview }}
+                      </p>
 
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                        <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                          <div class="relative">
-                            <a
-                                href="img/anamscreen.webp"
-                                data-fancybox="gallery2"
-                                data-caption="https://www.anamkitchen.be/"
-                            >
-                            <img src="../assets/anamscreen.webp" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                            </a>
-                            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                          </div>
-                        </div>
-                        <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                          <div class="relative">
-                            <a
-                                href="img/bassin.webp"
-                                data-fancybox="gallery2"
-                                data-caption="https://www.bassin-nord.brussels/agenda/"
-                            >
-                            <img src="../assets/bassin.webp" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                            </a>
-                            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                          </div>
-                          <div class="relative">
-                            <a
-                                href="img/undiscoverscreen.webp"
-                                data-fancybox="gallery2"
-                                data-caption="https://undiscover.me/"
-                            >
-                            <img src="../assets/undiscoverscreen.webp" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                            </a>
-                            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                          </div>
-                        </div>
-                        <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                          <div class="relative">
-                            <a
-                                href="img/colonelmobilescreen.webp"
-                                data-fancybox="gallery2"
-                                data-caption="https://www.colonelgustave.com/"
-                            >
-                            <img src="../assets/colonelmobilescreen.webp" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                            </a>
-                            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                          </div>
-                          <div class="relative">
-                            <a
-                                href="img/pizzascreen.webp"
-                                data-fancybox="gallery2"
-                                data-caption="https://www.pizzavino.be/"
-                            >
-                            <img src="../assets/pizzascreen.webp" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
-                            </a>
-                            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+              <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div class="relative">
+                    <a
+                        href="img/anamscreen.webp"
+                        data-fancybox="gallery2"
+                        data-caption="https://www.anamkitchen.be/"
+                    >
+                      <img src="../assets/anamscreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                    </a>
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  </div>
+                </div>
+                <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <div class="relative">
+                    <a
+                        href="img/bassin.webp"
+                        data-fancybox="gallery2"
+                        data-caption="https://www.bassin-nord.brussels/agenda/"
+                    >
+                      <img src="../assets/bassin.webp" alt="" class="w-full bg-gray-900/5 object-cover shadow-lg" />
+                    </a>
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  </div>
+                  <div class="relative">
+                    <a
+                        href="img/undiscoverscreen.webp"
+                        data-fancybox="gallery2"
+                        data-caption="https://undiscover.me/"
+                    >
+                      <img src="../assets/undiscoverscreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                    </a>
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  </div>
+                </div>
+                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                  <div class="relative">
+                    <a
+                        href="img/colonelmobilescreen.webp"
+                        data-fancybox="gallery2"
+                        data-caption="https://www.colonelgustave.com/"
+                    >
+                      <img src="../assets/colonelmobilescreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                    </a>
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  </div>
+                  <div class="relative">
+                    <a
+                        href="img/pizzascreen.webp"
+                        data-fancybox="gallery2"
+                        data-caption="https://www.pizzavino.be/"
+                    >
+                      <img src="../assets/pizzascreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                    </a>
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
 
-    <div class="bg-black relative mx-auto py-20 px-4 sm:px-6 lg:px-8 lg:py-24">
+
+    <div id="philosophy" class="bg-black relative mx-auto py-20 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div class="relative lg:flex lg:items-center">
 
         <div class="relative lg:ml-10">
@@ -547,17 +581,17 @@ export default {
         <div class=" py-1 px-4  lg:py-16">
           <div class="space-y-8 sm:space-y-12">
             <div class="space-y-5 sm:space-y-4 text-right">
-              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
+              <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
               <p class="text-3xl font-semibold tracking-tight text-gray-900">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and convert new leads, and provides a great user experience.</p>
             </div>
             <div class="text-center pt-20">
               <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
-                <li v-for="person in people" :key="person.name">
-                  <a :href="person.href" class="space-y-4">
-                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="person.imageUrl" alt="" />
+                <li v-for="project in projects" :key="project.name">
+                  <a :href="project.href" class="space-y-4">
+                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="" />
                     <div class="space-y-2">
                       <div class="text-xs font-medium lg:text-sm">
-                        <h3 class="text-xl leading-8 text-black-600">{{ person.name }}</h3>
+                        <h3 class="text-xl leading-8 text-black-600">{{ project.name }}</h3>
                       </div>
                     </div>
                   </a>
@@ -569,84 +603,84 @@ export default {
       </div>
     </div>
 
-  <div class="relative isolate bg-black py-24">
-    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-      <div class="relative px-6 pb-20 pt-24 sm:pt-24 lg:static lg:px-8 lg:py-24">
-        <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-          <h2 class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
-          <p class="mt-6 text-3xl font-semibold tracking-tight text-white">
-            As your partner i do my best, but what's more important is how i will try help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there, we do it together as one single, cohesive team.
-          </p>
+    <div class="relative isolate bg-black py-12 sm:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <div class="relative px-6 pb-12 pt-12 sm:pt-24 sm:pb-24 lg:static lg:px-8 lg:py-24">
+          <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
+            <p class="mt-6 text-3xl font-semibold tracking-tight text-white">
+              As your partner i do my best, but what's more important is how i will try help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there, we do it together as one single, cohesive team.
+            </p>
 
-          <p class="mt-6 text-xl leading-8 text-white">
-            No matter what level of web expertise you have, the whole process of development will be simple and manageable.
-          </p>
-          <p class="mt-6 text-xl leading-8 text-white">
-            I dont want to lure you with empty promises and hyperbole. Instead, i prefer results.
-          </p>
-          <p class="mt-6 text-xl leading-8 text-white">
-            I know how important is the presence on the web for you, and that's why I'm committed every day to ensure the best result.
-          </p>
-        </div>
-      </div>
-      <form ref="form" @submit.prevent="sendEmail">
-        <div class="container px-2 py-12 mx-auto flex">
-          <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 p-6">
-            <h2 class="text-4xl font-bold tracking-tight sm:text-6x text-black mb-1 ">Get in touch!</h2>
-            <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-            <div class="relative mb-4 mt-5">
-              <label for="name" class="text-xl leading-8 text-black">Name / Company</label>
-              <input v-model="name" type="text" id="name" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-            </div>
-            <div class="relative mb-4">
-              <label for="email" class="text-xl leading-8 text-black">Email</label>
-              <input v-model="email" type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-            </div>
-            <div class="relative mb-4">
-              <label for="subject" class="text-xl leading-8 text-black">Subject</label>
-              <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-            </div>
-            <div class="relative mb-4">
-              <label for="message" class="text-xl leading-8 text-black">Message</label>
-              <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
-            </div>
-            <div class="relative mb-4">
-              <label for="chaptcha" class="text-xl leading-8 text-black">CAPTCHA verification: 6 + 6 = ?</label>
-              <input v-model="chaptcha" name="chaptcha" id="chaptcha" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-            </div>
-            <button v-if="chaptcha == 12" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-              <span class="flex">
-                <span class="flex mt-0.5">Send</span>
-                <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
-              </span>
-            </button>
+            <p class="mt-6 text-xl leading-8 text-white">
+              No matter what level of web expertise you have, the whole process of development will be simple and manageable.
+            </p>
+            <p class="mt-6 text-xl leading-8 text-white">
+              I dont want to lure you with empty promises and hyperbole. Instead, i prefer results.
+            </p>
+            <p class="mt-6 text-xl leading-8 text-white">
+              I know how important is the presence on the web for you, and that's why I'm committed every day to ensure the best result.
+            </p>
           </div>
         </div>
-        <div class="mt-3" v-if="confirmation" >
-          <div v-if="alertsOpen" class="rounded-md bg-green-50 p-4">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <CheckCircleIcon class="h-5 w-5 text-green-400" aria-hidden="true" />
+        <form ref="form" @submit.prevent="sendEmail">
+          <div class="container px-2 py-12 mx-auto flex">
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 pt-12 pb-12 pl-6 pr-6">
+              <h2 class="text-4xl font-bold tracking-tight sm:text-6x text-black mb-1 ">Get in touch!</h2>
+              <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+              <div class="relative mb-4 mt-5">
+                <label for="name" class="text-xl leading-8 text-black">Name / Company</label>
+                <input v-model="name" type="text" id="name" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
-              <div class="ml-3">
-                <p class="text-sm font-medium text-green-800">
-                  {{ confirmation }}
-                </p>
+              <div class="relative mb-4">
+                <label for="email" class="text-xl leading-8 text-black">Email</label>
+                <input v-model="email" type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
-              <div class="ml-auto pl-3">
-                <div class="-mx-1.5 -my-1.5">
-                  <button v-on:click="closeAlert()" type="button" class="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
-                    <span class="sr-only">Dismiss</span>
-                    <XCircleIcon class="h-5 w-5" aria-hidden="true" />
-                  </button>
+              <div class="relative mb-4">
+                <label for="subject" class="text-xl leading-8 text-black">Subject</label>
+                <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+              </div>
+              <div class="relative mb-4">
+                <label for="message" class="text-xl leading-8 text-black">Message</label>
+                <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+              </div>
+              <div class="relative mb-4">
+                <label for="chaptcha" class="text-xl leading-8 text-black">CAPTCHA verification: 6 + 6 = ?</label>
+                <input v-model="chaptcha" name="chaptcha" id="chaptcha" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+              </div>
+              <button v-if="chaptcha == 12" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                <span class="flex">
+                  <span class="flex mt-0.5">Send</span>
+                  <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="mt-3" v-if="confirmation" >
+            <div v-if="alertsOpen" class="rounded-md bg-green-50 p-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <CheckCircleIcon class="h-5 w-5 text-green-400" aria-hidden="true" />
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-green-800">
+                    {{ confirmation }}
+                  </p>
+                </div>
+                <div class="ml-auto pl-3">
+                  <div class="-mx-1.5 -my-1.5">
+                    <button v-on:click="closeAlert()" type="button" class="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
+                      <span class="sr-only">Dismiss</span>
+                      <XCircleIcon class="h-5 w-5" aria-hidden="true" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 
 </template>
 

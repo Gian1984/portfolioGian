@@ -6,13 +6,6 @@ import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
-const navigation = [
-  { name: 'Kind of', href: '#' },
-  { name: 'Skills', href: '#' },
-  { name: 'At work', href: '#' },
-  { name: 'Projects', href: '#' },
-  { name: 'Contact', href: '#' },
-]
 
 const mobileMenuOpen = ref(false)
 
@@ -80,25 +73,6 @@ const footerNavigation = {
 }
 
 
-const beforeEnter = (el) => {
-    el.style.opacity = 0
-    el.style.transform = 'translateX(-400px)'
-}
-
-const beforeRight = (el) => {
-  el.style.opacity = 0
-  el.style.transform = 'translateX(400px)'
-}
-
-const enter = (el, done) => {
-    gsap.to(el, {
-        opacity: 1,
-        x: 0,
-        duration: 1.5,
-        onComplete: done,
-        delay: el.dataset.index * 0.5,
-    })
-}
 const beforeSlide = (el) => {
     el.style.opacity = 0
     el.style.transform = 'translateY(400px)'
@@ -143,7 +117,12 @@ const slide = (el, done) => {
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+        <button v-on:click="scrolltoskills()" class="text-sm font-semibold leading-6 text-gray-900">Skills</button>
+        <button v-on:click="scrolltokindof()" class="text-sm font-semibold leading-6 text-gray-900">Kind of</button>
+        <button v-on:click="scrolltoatwork()" class="text-sm font-semibold leading-6 text-gray-900">At work</button>
+        <button v-on:click="scrolltophilosophy()" class="text-sm font-semibold leading-6 text-gray-900">Philosophy</button>
+        <button v-on:click="scrolltoprojects()" class="text-sm font-semibold leading-6 text-gray-900">Projects</button>
+        <button v-on:click="scrolltocontact()" class="text-sm font-semibold leading-6 text-gray-900">Contact</button>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
     </nav>
@@ -163,7 +142,12 @@ const slide = (el, done) => {
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+              <button v-on:click="scrolltoskills()" class="block text-3xl font-semibold tracking-tight text-gray-900">Skills</button>
+              <button v-on:click="scrolltokindof()" class="block text-3xl font-semibold tracking-tight text-gray-900">Kind of</button>
+              <button v-on:click="scrolltoatwork()" class="block text-3xl font-semibold tracking-tight text-gray-900">At work</button>
+              <button v-on:click="scrolltophilosophy()" class="block text-3xl font-semibold tracking-tight text-gray-900">Philosophy</button>
+              <button v-on:click="scrolltoprojects()" class="block text-3xl font-semibold tracking-tight text-gray-900">Projects</button>
+              <button v-on:click="scrolltocontact()" class="block text-3xl font-semibold tracking-tight text-gray-900">Contact</button>
             </div>
           </div>
         </div>
@@ -171,26 +155,6 @@ const slide = (el, done) => {
     </Dialog>
   </header>
 
-  <div class="bg-white">
-    <div class="mx-auto px-6 py-40 sm:pt-80 sm:pb-40 lg:px-8">
-      <transition
-          appear
-          @before-enter="beforeEnter"
-          @enter="enter"
-      >
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-8xl">Gianluca Tiengo<br/>Web Developer</h1>
-      </transition>
-      <transition
-          appear
-          @before-enter="beforeRight"
-          @enter="enter"
-      >
-      <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
-        I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.
-      </h2>
-      </transition>
-    </div>
-  </div>
 
 
     <router-view/>
@@ -228,5 +192,35 @@ const slide = (el, done) => {
         </footer>
 
 </template>
+<script>
+export default {
+  methods: {
+    scrolltoskills(){
+      const element = document.getElementById('skills');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrolltokindof(){
+      const element = document.getElementById('kindof');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrolltoatwork(){
+      const element = document.getElementById('atwork');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrolltophilosophy(){
+      const element = document.getElementById('philosophy');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrolltoprojects(){
+      const element = document.getElementById('projects');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+    scrolltocontact() {
+      const element = document.getElementById('contact');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+  }
 
+}
+</script>
 
