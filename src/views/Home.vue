@@ -168,7 +168,7 @@ export default {
                     name: '4 Venture',
                     role: 'Privately-held investment fund',
                     imageUrl:'./img/logos/4ventures-3.png',
-                    href:'https://www.brusano.brussels/',
+                    href:'https://www.4ventures.be/',
                 },
                 // More people...
             ]
@@ -587,7 +587,7 @@ export default {
             <div class="text-center pt-20">
               <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
                 <li v-for="project in projects" :key="project.name">
-                  <a :href="project.href" class="space-y-4">
+                  <a :href="project.href" target="_blank" class="space-y-4">
                     <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="" />
                     <div class="space-y-2">
                       <div class="text-xs font-medium lg:text-sm">

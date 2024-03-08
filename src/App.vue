@@ -169,9 +169,9 @@ const slide = (el, done) => {
                         </h5>
                         <div class="my-6 text-center">
                             <div class="flex space-x-6">
-                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" class="bg-white rounded-full p-2 outline-none text-pink-500 hover:text-teal-600">
+                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" target="_blank" class="bg-white rounded-full p-2 outline-none text-pink-500 hover:text-teal-600">
                                     <span class="sr-only">{{ item.name }}</span>
-                                    <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+                                    <component :is="item.icon" class="h-6 w-6 sm:h-8 sm:w-8" aria-hidden="true" />
                                 </a>
                             </div>
                         </div>
