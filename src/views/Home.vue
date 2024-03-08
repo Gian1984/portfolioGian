@@ -302,7 +302,7 @@ export default {
             @before-enter="beforeEnter"
             @enter="enter"
         >
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Gianluca Tiengo<br/>Web Developer</h1>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">Gianluca Tiengo<br/>Web Developer</h1>
         </transition>
         <transition
             appear
@@ -328,7 +328,7 @@ export default {
                   <path id="0ef284b8-28c2-426e-9442-8655d393522e" d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z" />
                   <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x="86" />
                 </svg>
-                <figcaption class="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-white">Ambition<br> & Integrity</figcaption>
+                <figcaption class="mt-6 text-4xl font-bold tracking-tight sm:text-6xl text-white">Ambition<br> & Integrity</figcaption>
                 <blockquote class="mt-6 text-xl font-semibold leading-8 text-white">
                   <p>I approach every challenge with energy and vigour. I come up with innovative solutions and I'm not afraid to think big. I care about my work, my clients and my people. I treat everyone with honesty and respect and expect to be treated in the same way.</p>
                 </blockquote>
@@ -340,8 +340,8 @@ export default {
               <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
                 <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I'm a web developer from Turin, Italy and currently living in Brussels. I enjoy building everything from small business to rich interactive apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.</p>
-                <p class="mt-8 text-xl leading-8 text-black">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTMl, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
-                <p class="mt-8 text-xl leading-8 text-black">As developer I understand the importance to share knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTMl, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">As developer I understand the importance to share knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
               </div>
             </div>
           </div>
@@ -359,10 +359,10 @@ export default {
             <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6x">
               I design and develop responsive brochure websites to showcase your products and services in alignment with your brand essence, your target audience and your preferences. My websites follow the latest design trends to ensure they’re up to date for years to come.
             </p>
-            <p class="mt-6 text-xl leading-8 text-black-600">
+            <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
               In addition to designing a beautiful, trendy and modern-looking website that fits with your brand, i will also take care of all technical aspects of the e-commerce side to ensure that everything works without issues. I can set up smooth payment systems, integrations and subscriptions.
             </p>
-            <p class="mt-6 text-xl leading-8 text-black-600">
+            <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
               I deliver web-based applications that help organizations to keep pace with constantly changing business needs. Such applications boast quick and easy access from anywhere on the Internet, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.
             </p>
           </div>
@@ -429,7 +429,7 @@ export default {
                     </span>
                   </div>
                   <h3 class="mt-8 text-3xl font-semibold tracking-tight text-gray-900">{{ feature.name }}</h3>
-                  <p class="mt-5 mb-4 text-xl leading-8 text-black-600">
+                  <p class="mt-5 mb-4 text-xl leading-8 text-black-600 font-semibold">
                     {{ feature.description }}
                   </p>
                 </div>
@@ -439,8 +439,6 @@ export default {
         </div>
       </div>
     </div>
-
-
 
     <div class="bg-gray-900 py-12 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -462,11 +460,10 @@ export default {
                 <div v-for="step in staeps" :key="step.id">
                   <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div class="flex-1">
-
                       <p class="text-3xl font-semibold tracking-tight text-gray-900">
                         {{ step.title }}
                       </p>
-                      <p class="mt-3 text-xl leading-8 text-black-600">
+                      <p class="mt-3 text-xl leading-8 text-black-600 font-semibold">
                         {{ step.preview }}
                       </p>
 
@@ -574,8 +571,6 @@ export default {
       </div>
     </div>
 
-
-
     <div class="pt-20 pb-20">
       <div class="bg-white">
         <div class=" py-1 px-4  lg:py-16 lg:px-8">
@@ -591,7 +586,7 @@ export default {
                     <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="" />
                     <div class="space-y-2">
                       <div class="text-xs font-medium lg:text-sm">
-                        <h3 class="text-xl leading-8 text-black-600">{{ project.name }}</h3>
+                        <h3 class="text-xl leading-8 font-semibold text-black-600">{{ project.name }}</h3>
                       </div>
                     </div>
                   </a>
@@ -612,13 +607,13 @@ export default {
               As your partner i do my best, but what's more important is how i will try help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there, we do it together as one single, cohesive team.
             </p>
 
-            <p class="mt-6 text-xl leading-8 text-white">
+            <p class="mt-6 text-xl leading-8 font-semibold text-white">
               No matter what level of web expertise you have, the whole process of development will be simple and manageable.
             </p>
-            <p class="mt-6 text-xl leading-8 text-white">
+            <p class="mt-6 text-xl leading-8 font-semibold text-white">
               I dont want to lure you with empty promises and hyperbole. Instead, i prefer results.
             </p>
-            <p class="mt-6 text-xl leading-8 text-white">
+            <p class="mt-6 text-xl leading-8 font-semibold text-white">
               I know how important is the presence on the web for you, and that's why I'm committed every day to ensure the best result.
             </p>
           </div>
@@ -629,23 +624,23 @@ export default {
               <h2 class="text-4xl font-bold tracking-tight sm:text-6x text-black mb-1 ">Get in touch!</h2>
               <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
               <div class="relative mb-4 mt-5">
-                <label for="name" class="text-sm sm:text-lg leading-8 text-black">Name / Company</label>
+                <label for="name" class="text-sm sm:text-lg leading-8 text-black font-semibold">Name / Company</label>
                 <input v-model="name" type="text" id="name" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="email" class="text-sm sm:text-lg leading-8 text-black">Email</label>
+                <label for="email" class="text-sm sm:text-lg leading-8 text-black font-semibold">Email</label>
                 <input v-model="email" type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="subject" class="text-sm sm:text-lg leading-8 text-black">Subject</label>
+                <label for="subject" class="text-sm sm:text-lg leading-8 text-black font-semibold">Subject</label>
                 <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="message" class="text-sm sm:text-lg leading-8 text-black">Message</label>
+                <label for="message" class="text-sm sm:text-lg leading-8 text-black font-semibold">Message</label>
                 <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
               </div>
               <div class="relative mb-4">
-                <label for="chaptcha" class="text-sm sm:text-lg leading-8 text-black">CAPTCHA verification: 6 + 6 = ?</label>
+                <label for="chaptcha" class="text-sm sm:text-lg leading-8 text-black font-semibold">CAPTCHA verification: 6 + 6 = ?</label>
                 <input v-model="chaptcha" name="chaptcha" id="chaptcha" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <button v-if="chaptcha == 12" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
