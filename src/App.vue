@@ -113,7 +113,7 @@ const slide = (el, done) => {
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
-          <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+          <Bars3Icon class="h-10 w-10 text-black" aria-hidden="true" />
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
@@ -134,20 +134,20 @@ const slide = (el, done) => {
             <span class="sr-only">Your Company</span>
             <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.png" alt="Gianluca Tiengo Web Developer Logo" />
           </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+          <button type="button" id="close" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
-            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+            <XMarkIcon class="h-10 w-10 text-black" aria-hidden="true" />
           </button>
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <button v-on:click="scrolltoskills()" class="block text-3xl font-semibold tracking-tight text-gray-900">Skills</button>
-              <button v-on:click="scrolltokindof()" class="block text-3xl font-semibold tracking-tight text-gray-900">Kind of</button>
-              <button v-on:click="scrolltoatwork()" class="block text-3xl font-semibold tracking-tight text-gray-900">At work</button>
-              <button v-on:click="scrolltophilosophy()" class="block text-3xl font-semibold tracking-tight text-gray-900">Philosophy</button>
-              <button v-on:click="scrolltoprojects()" class="block text-3xl font-semibold tracking-tight text-gray-900">Projects</button>
-              <button v-on:click="scrolltocontact()" class="block text-3xl font-semibold tracking-tight text-gray-900">Contact</button>
+              <button @click="drawer()" v-on:click="scrolltoskills()" class="block text-3xl font-semibold tracking-tight text-gray-900">Skills</button>
+              <button @click="drawer()" v-on:click="scrolltokindof()" class="block text-3xl font-semibold tracking-tight text-gray-900">Kind of</button>
+              <button @click="drawer()" v-on:click="scrolltoatwork()" class="block text-3xl font-semibold tracking-tight text-gray-900">At work</button>
+              <button @click="drawer()" v-on:click="scrolltophilosophy()" class="block text-3xl font-semibold tracking-tight text-gray-900">Philosophy</button>
+              <button @click="drawer()" v-on:click="scrolltoprojects()" class="block text-3xl font-semibold tracking-tight text-gray-900">Projects</button>
+              <button @click="drawer()" v-on:click="scrolltocontact()" class="block text-3xl font-semibold tracking-tight text-gray-900">Contact</button>
             </div>
           </div>
         </div>
@@ -219,6 +219,9 @@ export default {
       const element = document.getElementById('contact');
       element.scrollIntoView({ behavior: 'smooth' });
     },
+    drawer() {
+      document.getElementById('close').click();
+    }
   }
 
 }

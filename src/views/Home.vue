@@ -351,10 +351,10 @@ export default {
 
     <div class="overflow-hidden bg-white py-10 sm:py-32">
       <div class="mx-auto max-w-full px-6 lg:flex lg:px-8">
-        <div class="mx-auto grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-          <div class="lg:col-end-1 lg:w-full lg:max-w-5xl lg:pb-8 ">
-            <h2 id="kindof" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Websites - Ecommerce<br>Web Application
+        <div class="mx-auto md:grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none  lg:gap-y-8">
+          <div class="lg:col-end-1 lg:w-full lg:max-w-5xl max-w-full lg:pb-8 ">
+            <h2 id="kindof" class="text-4xl font-bold text-gray-900 sm:text-6xl">
+              Websites Ecommerce<br> Web Application
             </h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6x">
               I design and develop responsive brochure websites to showcase your products and services in alignment with your brand essence, your target audience and your preferences. My websites follow the latest design trends to ensure they’re up to date for years to come.
@@ -421,12 +421,12 @@ export default {
         <div class="mt-12">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div v-for="feature in features" :key="feature.name" class="pt-6">
-              <div class="flow-root rounded-lg shadow-lg rounded-lg px-6 pb-8">
+              <div class="flow-root shadow-lg px-6 pb-8">
                 <div class="-mt-6">
                   <div>
-                                          <span class="inline-flex items-center justify-center p-3 bg-black rounded-md shadow-lg">
-                                            <component :is="feature.icon" class="h-12 w-12 text-pink-500" aria-hidden="true" />
-                                          </span>
+                    <span class="inline-flex items-center justify-center p-3 bg-white rounded-md shadow-lg">
+                      <component :is="feature.icon" class="h-8 w-8 sm:h-12 sm:w-12 text-pink-500" aria-hidden="true" />
+                    </span>
                   </div>
                   <h3 class="mt-8 text-3xl font-semibold tracking-tight text-gray-900">{{ feature.name }}</h3>
                   <p class="mt-5 mb-4 text-xl leading-8 text-black-600">
@@ -454,7 +454,7 @@ export default {
 
       <div class="relative isolate">
         <div class="overflow-hidden">
-          <div class="px-6 pb-12 pt-12 sm:pt-60 lg:px-8 lg:pt-32">
+          <div class="px-6 pb-12 pt-12 sm:pt-60 lg:px-8 lg:pt-32 lg:pb-32">
             <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
                 <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h1>
@@ -496,7 +496,7 @@ export default {
                     >
                       <img src="../assets/bassin.webp" alt="" class="w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div class="relative">
                     <a
@@ -506,7 +506,7 @@ export default {
                     >
                       <img src="../assets/undiscoverscreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                 </div>
                 <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
@@ -518,7 +518,7 @@ export default {
                     >
                       <img src="../assets/colonelmobilescreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div class="relative">
                     <a
@@ -528,7 +528,7 @@ export default {
                     >
                       <img src="../assets/pizzascreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
-                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                 </div>
               </div>
@@ -541,14 +541,14 @@ export default {
 
 
     <div id="philosophy" class="bg-black relative mx-auto py-20 px-4 sm:px-6 lg:px-8 lg:py-24">
-      <div class="relative lg:flex lg:items-center">
+      <div class="relative lg:flex lg:items-center max-w-7xl mx-auto">
 
         <div class="relative lg:ml-10">
           <svg class="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-indigo-200 opacity-50" stroke="currentColor" fill="none" viewBox="0 0 144 144" aria-hidden="true">
             <path stroke-width="2" d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z" />
           </svg>
           <blockquote class="relative">
-            <div class="text-3xl font-semibold tracking-tight text-white">
+            <div class="text-xl sm:text-3xl font-semibold tracking-tight text-white">
               <p class="text-left">
                 One of the important skills as a Self-taught developer is to be resourceful, my father taught me this skill when I was still very young, and I didn’t know it would take me far in life.
                 I started with wordpress for fun, and my curiosity led me to my first HTML / CSS site. Working during the day, at night I took courses on SoloLearn and all the online platforms that could satiate my desire to learn.
@@ -578,7 +578,7 @@ export default {
 
     <div class="pt-20 pb-20">
       <div class="bg-white">
-        <div class=" py-1 px-4  lg:py-16">
+        <div class=" py-1 px-4  lg:py-16 lg:px-8">
           <div class="space-y-8 sm:space-y-12">
             <div class="space-y-5 sm:space-y-4 text-right">
               <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
@@ -629,23 +629,23 @@ export default {
               <h2 class="text-4xl font-bold tracking-tight sm:text-6x text-black mb-1 ">Get in touch!</h2>
               <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
               <div class="relative mb-4 mt-5">
-                <label for="name" class="text-xl leading-8 text-black">Name / Company</label>
+                <label for="name" class="text-sm sm:text-lg leading-8 text-black">Name / Company</label>
                 <input v-model="name" type="text" id="name" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="email" class="text-xl leading-8 text-black">Email</label>
+                <label for="email" class="text-sm sm:text-lg leading-8 text-black">Email</label>
                 <input v-model="email" type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="subject" class="text-xl leading-8 text-black">Subject</label>
+                <label for="subject" class="text-sm sm:text-lg leading-8 text-black">Subject</label>
                 <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
-                <label for="message" class="text-xl leading-8 text-black">Message</label>
+                <label for="message" class="text-sm sm:text-lg leading-8 text-black">Message</label>
                 <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
               </div>
               <div class="relative mb-4">
-                <label for="chaptcha" class="text-xl leading-8 text-black">CAPTCHA verification: 6 + 6 = ?</label>
+                <label for="chaptcha" class="text-sm sm:text-lg leading-8 text-black">CAPTCHA verification: 6 + 6 = ?</label>
                 <input v-model="chaptcha" name="chaptcha" id="chaptcha" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <button v-if="chaptcha == 12" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
