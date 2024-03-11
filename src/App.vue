@@ -163,10 +163,10 @@ const slide = (el, done) => {
             <div class="px-4">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-6/12 px-4">
-                        <h4 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to know more about?</h4>
-                        <h5 class="text-3xl font-semibold tracking-tight text-gray-900">
+                        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to know more about?</h2>
+                        <h3 class="text-3xl font-semibold tracking-tight text-gray-900">
                             Follow me!
-                        </h5>
+                        </h3>
                         <div class="my-6 text-center">
                             <div class="flex space-x-6">
                                 <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" target="_blank" class="bg-white rounded-full p-2 outline-none text-pink-500 hover:text-teal-600">

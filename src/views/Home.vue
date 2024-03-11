@@ -310,7 +310,7 @@ export default {
             @enter="enter"
         >
           <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
-            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.
+            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" aria-label="mail to Gianluca Tiengo"  class="text-pink-500">here</a>.
           </h2>
         </transition>
       </div>
@@ -339,9 +339,15 @@ export default {
             <div class="text-base leading-7 text-gray-700">
               <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I'm a web developer from Turin, Italy and currently living in Brussels. I enjoy building everything from small business to rich interactive apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="mailto:gl.tiengo@gmail.com" class="text-pink-500">here</a>.</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTMl, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTML, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
                 <p class="mt-8 text-xl leading-8 text-black font-semibold">As developer I understand the importance to share knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">Here bellow you can find some important resources that I've collected during my experience and that i want to share. I am not affiliated with any of it, I am just using them personally and would want to share it with you, especially to all self-taught developer.</p>
+                <a href="https://letudev.com/" target="_blank" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                  <span class="flex">
+                    <span class="flex mt-0.5">I'm curious</span>
+                    <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -370,6 +376,7 @@ export default {
             <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
               <a
                   href="img/favascreen.webp"
+                  aria-label="visit https://www.favaclaudio.com/"
                   data-fancybox="gallery"
                   data-caption="https://www.favaclaudio.com/"
               >
@@ -381,6 +388,7 @@ export default {
                 <a
                     href="img/bioscreen.webp"
                     data-fancybox="gallery"
+                    aria-label="visit https://www.bioholistic.be/"
                     data-caption="https://www.bioholistic.be/"
                 >
                   <img src="../assets/bioscreen.webp" alt="https://www.bioholistic.be/" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" />
@@ -389,6 +397,7 @@ export default {
               <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                 <a
                     href="img/magrittescreen.webp"
+                    aria-label="visit https://magritte.com/"
                     data-fancybox="gallery"
                     data-caption="https://magritte.com/"
                 >
@@ -398,6 +407,7 @@ export default {
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                 <a
                     href="img/colonelscreen.webp"
+                    aria-label="https://www.colonelgustave.com/"
                     data-fancybox="gallery"
                     data-caption="https://www.colonelgustave.com/"
                 >
@@ -476,10 +486,11 @@ export default {
                   <div class="relative">
                     <a
                         href="img/anamscreen.webp"
+                        aria-label="visit https://www.anamkitchen.be/"
                         data-fancybox="gallery2"
                         data-caption="https://www.anamkitchen.be/"
                     >
-                      <img src="../assets/anamscreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/anamscreen.webp" alt="Anam Kitchen" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -488,20 +499,22 @@ export default {
                   <div class="relative">
                     <a
                         href="img/bassin.webp"
+                        aria-label="https://www.bassin-nord.brussels/"
                         data-fancybox="gallery2"
                         data-caption="https://www.bassin-nord.brussels/agenda/"
                     >
-                      <img src="../assets/bassin.webp" alt="" class="w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/bassin.webp" alt="Bassin Nord" class="w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div class="relative">
                     <a
                         href="img/undiscoverscreen.webp"
+                        aria-label="visit https://undiscover.me/"
                         data-fancybox="gallery2"
                         data-caption="https://undiscover.me/"
                     >
-                      <img src="../assets/undiscoverscreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/undiscoverscreen.webp" alt="Undiscover.me" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -510,20 +523,22 @@ export default {
                   <div class="relative">
                     <a
                         href="img/colonelmobilescreen.webp"
+                        aria-label="visit https://www.colonelgustave.com/"
                         data-fancybox="gallery2"
                         data-caption="https://www.colonelgustave.com/"
                     >
-                      <img src="../assets/colonelmobilescreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/colonelmobilescreen.webp" alt="Colonel Gustave" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div class="relative">
                     <a
                         href="img/pizzascreen.webp"
+                        aria-label="visit https://www.pizzavino.be/"
                         data-fancybox="gallery2"
                         data-caption="https://www.pizzavino.be/"
                     >
-                      <img src="../assets/pizzascreen.webp" alt="" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/pizzascreen.webp" alt="Pizza Vino" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -582,8 +597,8 @@ export default {
             <div class="text-center pt-20">
               <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
                 <li v-for="project in projects" :key="project.name">
-                  <a :href="project.href" target="_blank" class="space-y-4">
-                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="" />
+                  <a :href="project.href" :aria-label="project.name" target="_blank" class="space-y-4">
+                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="single project image" />
                     <div class="space-y-2">
                       <div class="text-xs font-medium lg:text-sm">
                         <h3 class="text-xl leading-8 font-semibold text-black-600">{{ project.name }}</h3>
