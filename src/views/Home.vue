@@ -388,9 +388,17 @@ export default {
             <div class="text-base leading-7 text-gray-700">
               <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create fast, responsive, and accessible websites built with best practices. My main area of expertise is full-stack development (HTML, CSS, JS, PHP), covering small and medium-sized web applications. I also have solid experience with popular open-source CMS such as WordPress.</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">As a developer, I strongly believe in sharing knowledge. The web development community has given me so much through free resources, tutorials, and open-source tools, and giving back felt natural.</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">I built CodeHelper.me as a side project: a collection of tools and articles I created myself, alongside curated external resources I use daily. Everything is free. If you are a self-taught developer or just curious, take a look.</p>
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-black">I create fast, responsive, and accessible websites built with best practices. My main area of expertise is full-stack development (HTML, CSS, JS, PHP), covering small and medium-sized web applications. I also have solid experience with popular open-source CMS such as WordPress.</p>
+                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="border-l-2 border-pink-500 pl-5">
+                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Knowledge sharing</span>
+                    <p class="text-base leading-7 text-black">As a developer, I strongly believe in sharing knowledge. The web development community has given me so much through free resources, tutorials, and open-source tools, and giving back felt natural.</p>
+                  </div>
+                  <div class="border-l-2 border-pink-500 pl-5">
+                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">CodeHelper.me</span>
+                    <p class="text-base leading-7 text-black">I built CodeHelper.me as a side project: a collection of tools and articles I created myself, alongside curated external resources I use daily. Everything is free. If you are a self-taught developer or just curious, take a look.</p>
+                  </div>
+                </div>
                 <a href="https://www.codehelper.me/" target="_blank" rel="noopener noreferrer" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                   <span class="flex">
                     <span class="flex mt-0.5">I'm curious</span>
@@ -412,15 +420,19 @@ export default {
             <h2 class="text-4xl font-bold text-gray-900 sm:text-6xl">
               Websites · E-commerce<br> Web Applications
             </h2>
-            <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+            <p class="mt-6 text-3xl font-semibold tracking-tight text-black sm:text-6xl">
               I design and develop responsive brochure websites to showcase your products and services in alignment with your brand identity, your target audience and your preferences. My websites follow the latest design trends to ensure they stay relevant for years to come.
             </p>
-            <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
-              In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works seamlessly. I can set up secure payment gateways, third-party integrations and subscriptions.
-            </p>
-            <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
-              I deliver web-based applications that help businesses to keep pace with constantly changing needs. Such applications offer quick and easy access from any device, anywhere, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.
-            </p>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="border-l-2 border-pink-500 pl-5">
+                <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">E-commerce</span>
+                <p class="text-base leading-7 text-black">In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works seamlessly. I can set up secure payment gateways, third-party integrations and subscriptions.</p>
+              </div>
+              <div class="border-l-2 border-pink-500 pl-5">
+                <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Web Applications</span>
+                <p class="text-base leading-7 text-black">I deliver web-based applications that help businesses to keep pace with constantly changing needs. Such applications offer quick and easy access from any device, anywhere, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.</p>
+              </div>
+            </div>
           </div>
           <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
@@ -475,25 +487,19 @@ export default {
         <h2 id="atwork" class="mt-2 mb-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Everything you need<br> to build your website
         </h2>
-        <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-gray-900">
+        <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-black">
           My approach to website development fuses creativity<br> and technology,<br> giving you the platform you need.
         </p>
         <div class="mt-12">
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div v-for="feature in features" :key="feature.name" class="pt-6">
-              <div class="flow-root shadow-lg px-6 pb-8">
-                <div class="-mt-6">
-                  <div>
-                    <span class="inline-flex items-center justify-center p-3 bg-white rounded-md shadow-lg">
-                      <component :is="feature.icon" class="h-8 w-8 sm:h-12 sm:w-12 text-pink-500" aria-hidden="true" />
-                    </span>
-                  </div>
-                  <h3 class="mt-8 text-3xl font-semibold tracking-tight text-gray-900">{{ feature.name }}</h3>
-                  <p class="mt-5 mb-4 text-xl leading-8 text-black-600 font-semibold">
-                    {{ feature.description }}
-                  </p>
-                </div>
-              </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              v-for="(feature, index) in features"
+              :key="feature.name"
+              class="p-6 bg-white  border-r-2 border-r-pink-500"
+            >
+              <span class="block text-xs font-mono text-pink-500 mb-6">{{ String(index + 1).padStart(2, '0') }}.</span>
+              <h3 class="text-xl font-bold tracking-tight text-gray-900 mb-3">{{ feature.name }}</h3>
+              <p class="text-base leading-7 text-black">{{ feature.description }}</p>
             </div>
           </div>
         </div>
@@ -516,18 +522,16 @@ export default {
             <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
                 <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h2>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:max-w-md lg:max-w-none">Depending on the type of project, the basic steps of building a website can vary. Not all websites are the same. Different types of management and planning are required.</p>
-                <div v-for="step in staeps" :key="step.id">
-                  <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                      <p class="text-3xl font-semibold tracking-tight text-gray-900">
-                        {{ step.title }}
-                      </p>
-                      <p class="mt-3 text-xl leading-8 text-black-600 font-semibold">
-                        {{ step.preview }}
-                      </p>
-
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-black sm:max-w-md lg:max-w-none">Depending on the type of project, the basic steps of building a website can vary. Not all websites are the same. Different types of management and planning are required.</p>
+                <div class="mt-12 divide-y divide-gray-200">
+                  <div v-for="step in staeps" :key="step.id" class="py-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <span class="text-sm font-mono text-pink-500 min-w-[2rem]">{{ String(step.id).padStart(2, '0') }}.</span>
+                      <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">{{ step.category.name }}</span>
+                      <span class="text-xs text-gray-300 mx-1">·</span>
+                      <h3 class="text-xl font-bold uppercase tracking-tight text-gray-900">{{ step.title }}</h3>
                     </div>
+                    <p class="pl-10 text-base leading-7 text-black">{{ step.preview }}</p>
                   </div>
                 </div>
               </div>
@@ -602,37 +606,24 @@ export default {
 
 
 
-    <div id="philosophy" class="bg-black relative mx-auto py-20 px-4 sm:px-6 lg:px-8 lg:py-24">
-      <div class="relative lg:flex lg:items-center max-w-7xl mx-auto">
+    <div id="philosophy" class="bg-black py-20 px-8 sm:px-16 lg:py-32 lg:px-24">
+      <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 lg:gap-24 items-start">
 
-        <div class="relative lg:ml-10">
-          <svg class="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-indigo-200 opacity-50" stroke="currentColor" fill="none" viewBox="0 0 144 144" aria-hidden="true">
-            <path stroke-width="2" d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z" />
-          </svg>
-          <blockquote class="relative">
-            <div class="text-xl sm:text-3xl font-semibold tracking-tight text-white">
-              <p class="text-left">
-                One of the most important skills as a self-taught developer is to be resourceful. My father taught me this when I was still very young, and I didn’t know it would take me so far in life.
-                I started with WordPress for fun, and my curiosity led me to my first HTML/CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.
-              </p>
-              <p class="text-left mt-6">
-                I realized then that making websites was what I truly wanted to do, and I decided to attend a programming bootcamp to get better and learn more.<br>
-                Through this learning journey that continues to this day, I am happy and I continue to apply the same principles to what has now become my job.<br><br>
-              </p>
-              <p>
-                <span class="text-pink-500 font-bold">Re-source-ful:</span>
-                <i> Having the ability to find clever ways to overcome difficulties.</i>
-              </p>
-            </div>
-            <div class="mt-8">
-              <div class="flex">
-                <div class="flex-shrink-0 lg:hidden">
-                  <img class="h-12 w-12 rounded-full" src="../assets/gian.webp" alt="Gianluca Tiengo" />
-                </div>
-              </div>
-            </div>
-          </blockquote>
+        <!-- Left: display headline -->
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
+          My father taught me to be resourceful.
+        </h2>
+
+        <!-- Right: body text -->
+        <div class="space-y-6 lg:pt-4">
+          <p class="text-white text-base leading-7">One of the most important skills as a self-taught developer is to be resourceful. I started with WordPress for fun, and my curiosity led me to my first HTML/CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.</p>
+          <p class="text-white text-base leading-7">I realized then that making websites was what I truly wanted to do, and I decided to attend a programming bootcamp. Through this learning journey that continues to this day, I am happy and I continue to apply the same principles to what has now become my job.</p>
+          <div class="pt-4 border-t border-gray-800">
+            <span class="text-pink-500 font-semibold text-xs uppercase tracking-widest">Re-source-ful</span>
+            <p class="mt-1 text-white text-sm italic">Having the ability to find clever ways to overcome difficulties.</p>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -642,7 +633,7 @@ export default {
           <div class="space-y-8 sm:space-y-12">
             <div class="space-y-5 sm:space-y-4 text-right">
               <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
-              <p class="text-3xl font-semibold tracking-tight text-gray-900">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and converts new leads, and provides a great user experience.</p>
+              <p class="text-3xl font-semibold tracking-tight text-black">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and converts new leads, and provides a great user experience.</p>
             </div>
             <div class="pt-16">
               <div class="divide-y divide-gray-200">
@@ -684,12 +675,12 @@ export default {
                         loading="lazy"
                       />
                       <div class="flex-1 min-w-0">
-                        <p class="text-gray-700 font-medium mb-3">{{ project.role }}</p>
+                        <p class="text-black font-medium mb-3">{{ project.role }}</p>
                         <a
                           :href="project.href"
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="inline-flex items-center gap-2 text-pink-500 font-semibold hover:text-pink-700 transition-colors text-sm"
+                          class="inline-flex items-center gap-2 text-pink-500 font-mono hover:text-pink-700 transition-colors text-sm"
                           @click.stop
                         >
                           {{ project.href.replace('https://', '').replace('www.', '').replace(/\/$/, '') }}
@@ -707,45 +698,50 @@ export default {
     </div>
 
     <div class="relative isolate bg-black py-16 sm:py-28">
-      <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-32 px-8 sm:px-16 lg:px-24">
 
         <!-- Left: text -->
         <div class="flex flex-col justify-center">
           <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
-          <p class="mt-8 text-3xl font-semibold leading-8 text-gray-300">
+          <p class="mt-8 text-3xl font-semibold leading-8 text-white">
             As your partner, my focus goes beyond just building a website. Whether it’s aligning on your business challenge, understanding the people you need to reach, or defining the best process to get there, we do it together as one cohesive team.
           </p>
-          <p class="mt-6 text-lg leading-8 text-white">
-            No matter what level of web expertise you have, the whole development process will be simple and manageable.
-          </p>
-          <p class="mt-6 text-lg leading-8 text-white">
-            I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.
-          </p>
-          <p class="mt-6 text-lg leading-8 text-white">
-            I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.
-          </p>
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="border-l-2 border-pink-500 pl-5">
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Simple</span>
+              <p class="text-base leading-7 text-white">No matter what level of web expertise you have, the whole development process will be simple and manageable.</p>
+            </div>
+            <div class="border-l-2 border-pink-500 pl-5">
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Honest</span>
+              <p class="text-base leading-7 text-white">I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.</p>
+            </div>
+            <div class="border-l-2 border-pink-500 pl-5">
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Committed</span>
+              <p class="text-base leading-7 text-white">I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Right: form -->
         <form ref="form" @submit.prevent="sendEmail" class="flex flex-col justify-center">
           <div class="pt-8">
             <h3 class="text-2xl font-bold text-white mb-1">Get in touch.</h3>
-            <p class="text-gray-500 text-sm mb-10">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <p class="text-white text-sm mb-10">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
             <div class="space-y-8">
               <div>
-                <label for="name" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Name / Company</label>
+                <label for="name" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Name / Company</label>
                 <input v-model="name" type="text" id="name" name="name" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="email" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Email</label>
+                <label for="email" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Email</label>
                 <input v-model="email" type="email" id="email" name="email" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="subject" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Subject</label>
+                <label for="subject" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Subject</label>
                 <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="message" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Message</label>
+                <label for="message" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Message</label>
                 <textarea v-model="message" id="message" name="message" rows="4" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 resize-none transition-colors duration-200" required></textarea>
               </div>
               <div>
