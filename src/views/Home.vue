@@ -706,82 +706,70 @@ export default {
       </div>
     </div>
 
-    <div class="relative isolate bg-black py-12 sm:py-24">
-      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div class="relative px-6 pb-12 pt-12 sm:pt-24 sm:pb-24 lg:static lg:px-8 lg:py-24">
-          <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
-            <p class="mt-6 text-3xl font-semibold tracking-tight text-white">
-              As your partner, my focus goes beyond just building a website. Whether it’s aligning on your business challenge, understanding the people you need to reach, or defining the best process to get there, we do it together as one cohesive team.
-            </p>
+    <div class="relative isolate bg-black py-16 sm:py-28">
+      <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 lg:px-8">
 
-            <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              No matter what level of web expertise you have, the whole development process will be simple and manageable.
-            </p>
-            <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.
-            </p>
-            <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.
-            </p>
-          </div>
+        <!-- Left: text -->
+        <div class="flex flex-col justify-center">
+          <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
+          <p class="mt-8 text-3xl font-semibold leading-8 text-gray-300">
+            As your partner, my focus goes beyond just building a website. Whether it’s aligning on your business challenge, understanding the people you need to reach, or defining the best process to get there, we do it together as one cohesive team.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-white">
+            No matter what level of web expertise you have, the whole development process will be simple and manageable.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-white">
+            I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-white">
+            I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.
+          </p>
         </div>
-        <form ref="form" @submit.prevent="sendEmail">
-          <div class="container px-2 py-12 mx-auto flex">
-            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 pt-12 pb-12 pl-6 pr-6">
-              <h2 class="text-4xl font-bold tracking-tight sm:text-6xl text-black mb-1 ">Get in touch!</h2>
-              <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-              <div class="relative mb-4 mt-5">
-                <label for="name" class="text-sm sm:text-lg leading-8 text-black font-semibold">Name / Company</label>
-                <input v-model="name" type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+
+        <!-- Right: form -->
+        <form ref="form" @submit.prevent="sendEmail" class="flex flex-col justify-center">
+          <div class="pt-8">
+            <h3 class="text-2xl font-bold text-white mb-1">Get in touch.</h3>
+            <p class="text-gray-500 text-sm mb-10">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <div class="space-y-8">
+              <div>
+                <label for="name" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Name / Company</label>
+                <input v-model="name" type="text" id="name" name="name" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
-              <div class="relative mb-4">
-                <label for="email" class="text-sm sm:text-lg leading-8 text-black font-semibold">Email</label>
-                <input v-model="email" type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+              <div>
+                <label for="email" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Email</label>
+                <input v-model="email" type="email" id="email" name="email" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
-              <div class="relative mb-4">
-                <label for="subject" class="text-sm sm:text-lg leading-8 text-black font-semibold">Subject</label>
-                <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+              <div>
+                <label for="subject" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Subject</label>
+                <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
-              <div class="relative mb-4">
-                <label for="message" class="text-sm sm:text-lg leading-8 text-black font-semibold">Message</label>
-                <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+              <div>
+                <label for="message" class="block text-xs uppercase tracking-widest text-pink-500 mb-2">Message</label>
+                <textarea v-model="message" id="message" name="message" rows="4" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 resize-none transition-colors duration-200" required></textarea>
               </div>
-              <div class="relative mb-4">
-                <!-- Replace YOUR_TURNSTILE_SITE_KEY with your key from dash.cloudflare.com/turnstile -->
+              <div>
                 <div id="turnstile-widget"></div>
               </div>
-              <button v-if="turnstileToken" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                <span class="flex">
-                  <span class="flex mt-0.5">Send</span>
-                  <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
-                </span>
-              </button>
+              <div>
+                <button v-if="turnstileToken" type="submit" class="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-white border border-white px-6 py-3 hover:bg-white hover:text-black transition-colors duration-300">
+                  Send
+                  <ArrowRightIcon class="h-4 w-4" />
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="mt-3" v-if="confirmation" >
-            <div v-if="alertsOpen" class="rounded-md bg-green-50 p-4">
-              <div class="flex">
-                <div class="flex-shrink-0">
-                  <CheckCircleIcon class="h-5 w-5 text-green-400" aria-hidden="true" />
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-green-800">
-                    {{ confirmation }}
-                  </p>
-                </div>
-                <div class="ml-auto pl-3">
-                  <div class="-mx-1.5 -my-1.5">
-                    <button v-on:click="closeAlert()" type="button" class="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
-                      <span class="sr-only">Dismiss</span>
-                      <XCircleIcon class="h-5 w-5" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
+            <div class="mt-8" v-if="confirmation">
+              <div v-if="alertsOpen" class="flex items-center gap-3 border border-green-500 rounded p-4 bg-green-900/30">
+                <CheckCircleIcon class="h-5 w-5 text-green-400 flex-shrink-0" aria-hidden="true" />
+                <p class="text-sm font-medium text-green-300 flex-1">{{ confirmation }}</p>
+                <button v-on:click="closeAlert()" type="button" class="text-green-400 hover:text-green-300 focus:outline-none">
+                  <XCircleIcon class="h-5 w-5" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>
         </form>
+
       </div>
     </div>
 
