@@ -194,33 +194,33 @@ export default {
             return [
                 {
                     name: 'Push to Deploy',
-                    description: 'Knowledge of the most common provider of internet hosting and version control.',
+                    description: 'Experience with the most common hosting providers and version control platforms such as GitHub and Netlify.',
                     icon: CloudArrowUpIcon,
                 },
                 {
                     name: 'Style',
-                    description: 'Knowledge of most common CSS framework, to easily implement user-friendly UIs.',
+                    description: 'Knowledge of the most common CSS frameworks, to easily implement clean and user-friendly interfaces.',
                     icon: BeakerIcon,
                 },
                 {
                     name: 'Performant',
-                    description: 'VueJS framework, the most performant way to make blazing fast the Virtual DOM.',
+                    description: 'Built with Vue.js, a modern framework that delivers fast, smooth, and responsive user experiences.',
                     icon: ClockIcon,
                 },
                 {
                     name: 'Advanced Security',
-                    description: 'Usage of Laravel framework, the recommended PHP framework for robust application security',
+                    description: 'Built with Laravel, the recommended PHP framework for robust and secure application development.',
                     icon: ShieldCheckIcon,
                 },
                 {
                     name: 'Powerful API',
                     description:
-                        'API management, to simplify how you connect with your partners ( such as Google, Stripe ...)',
+                        'API management to simplify how you connect with third-party services (such as Google, Stripe, and more).',
                     icon: CogIcon,
                 },
                 {
                     name: 'Hosting',
-                    description: 'Administer hosting services, manage your email accounts or set up a WordPress instance.',
+                    description: 'Manage hosting services, set up email accounts, or get your WordPress instance up and running.',
                     icon: ServerIcon,
                 },
             ]
@@ -238,7 +238,7 @@ export default {
                     category: { name: 'Stage 1' },
                     image:'./img/logos/map.webp',
                     preview:
-                        'To define the vision of a product or service, I take the time to listen to you and understand your needs and those of your customers. I write a document with the technical specifications, some mockups, a program and a budget estimate.',
+                        'To define the vision of a product or service, I take the time to listen to you and understand your needs and those of your customers. I write a document with the technical specifications, some mockups, a timeline and a budget estimate.',
                 },
                 {
                     id: 2,
@@ -249,7 +249,7 @@ export default {
                     category: { name: 'Stage 2' },
                     image:'./img/logos/prototyping.webp',
                     preview:
-                        'There is no universal and precise formula, because each project can have different characteristics. At the beginning we have to define objectives and potential critical issues, after which we move on to the conception of the product and then to the creation of a prototype.',
+                        'There is no universal and precise formula, because each project can have different characteristics. At the beginning we have to define objectives and potential challenges, after which we move on to the design of the product and then to the creation of a prototype.',
                 },
                 {
                     id: 3,
@@ -260,7 +260,7 @@ export default {
                     category: { name: 'Stage 3' },
                     image:'./img/logos/developer.webp',
                     preview:
-                        'Do you have the vision, feel the pull and all you need is software? I will work with you to develop this new functional and design product that your customers will love to use. And I\'ll help you get started.',
+                        'Do you have the vision and all you need is software? I will work with you to develop this new, well-designed product that your customers will love to use. And I\'ll help you get started.',
                 },
             ]
         }
@@ -359,7 +359,7 @@ export default {
                 </svg>
                 <figcaption class="mt-6 text-4xl font-bold tracking-tight sm:text-6xl text-white">Ambition<br> & Integrity</figcaption>
                 <blockquote class="mt-6 text-xl font-semibold leading-8 text-white">
-                  <p>I approach every challenge with energy and vigour. I come up with innovative solutions and I'm not afraid to think big. I care about my work, my clients and my people. I treat everyone with honesty and respect and expect to be treated in the same way.</p>
+                  <p>I approach every challenge with energy and determination. I look for creative solutions and I'm not afraid to tackle complex problems. I genuinely care about my work and my clients. I treat everyone with honesty and respect, and I believe that trust is the foundation of any good working relationship.</p>
                 </blockquote>
               </figure>
             </div>
@@ -368,10 +368,10 @@ export default {
             <div class="text-base leading-7 text-gray-700">
               <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create successful responsive websites that are fast, easy to use, and built with the best practices. The main area of expertise is full-stack development — HTML, CSS, JS, PHP — building small and medium web apps and animations. I also have experience with popular open-source CMS like WordPress.</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">As a developer I understand the importance of sharing knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">Here below you can find some important resources that I’ve collected during my experience and that I want to share. I am not affiliated with any of them — I am just using them personally and would love to share them with you, especially with all self-taught developers.</p>
-                <a href="https://letudev.com/" target="_blank" rel="noopener noreferrer" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create fast, responsive, and accessible websites built with best practices. My main area of expertise is full-stack development (HTML, CSS, JS, PHP), covering small and medium-sized web applications. I also have solid experience with popular open-source CMS such as WordPress.</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">As a developer, I strongly believe in sharing knowledge. The web development community has given me so much through free resources, tutorials, and open-source tools, and giving back felt natural.</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">I built CodeHelper.me as a side project: a collection of tools and articles I created myself, alongside curated external resources I use daily. Everything is free. If you are a self-taught developer or just curious, take a look.</p>
+                <a href="https://www.codehelper.me/" target="_blank" rel="noopener noreferrer" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                   <span class="flex">
                     <span class="flex mt-0.5">I'm curious</span>
                     <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
@@ -392,13 +392,13 @@ export default {
               Websites · E-commerce<br> Web Applications
             </h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-              I design and develop responsive brochure websites to showcase your products and services in alignment with your brand essence, your target audience and your preferences. My websites follow the latest design trends to ensure they stay relevant for years to come.
+              I design and develop responsive brochure websites to showcase your products and services in alignment with your brand identity, your target audience and your preferences. My websites follow the latest design trends to ensure they stay relevant for years to come.
             </p>
             <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
-              In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works without issues. I can set up smooth payment systems, integrations and subscriptions.
+              In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works seamlessly. I can set up secure payment gateways, third-party integrations and subscriptions.
             </p>
             <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
-              I deliver web-based applications that help organizations to keep pace with constantly changing business needs. Such applications boast quick and easy access from anywhere on the Internet, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.
+              I deliver web-based applications that help businesses to keep pace with constantly changing needs. Such applications offer quick and easy access from any device, anywhere, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.
             </p>
           </div>
           <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
@@ -417,8 +417,8 @@ export default {
                 <a
                     href="img/bioscreen.webp"
                     data-fancybox="gallery"
-                    aria-label="visit https://www.bioholistic.be/"
-                    data-caption="https://www.bioholistic.be/"
+                    aria-label="visit https://www.districare.be/"
+                    data-caption="https://www.districare.be/"
                 >
                   <img src="../assets/bioscreen.webp" alt="Screenshot of the Bioholistic health platform website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
@@ -452,10 +452,10 @@ export default {
     <div class="relative py-12 sm:py-32">
       <div class="mx-auto px-4 text-right sm:px-6 lg:px-8">
         <h2 id="atwork" class="mt-2 mb-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Everything you need<br> to deploy your app
+          Everything you need<br> to build your website
         </h2>
         <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-gray-900">
-          My approach to website development fuses creativity,<br> technology and data analysis,<br> giving you the platform you need.
+          My approach to website development fuses creativity<br> and technology,<br> giving you the platform you need.
         </p>
         <div class="mt-12">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -592,15 +592,15 @@ export default {
             <div class="text-xl sm:text-3xl font-semibold tracking-tight text-white">
               <p class="text-left">
                 One of the most important skills as a self-taught developer is to be resourceful. My father taught me this when I was still very young, and I didn’t know it would take me so far in life.
-                I started with WordPress for fun, and my curiosity led me to my first HTML / CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.
+                I started with WordPress for fun, and my curiosity led me to my first HTML/CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.
               </p>
               <p class="text-left mt-6">
-                I realized then that making websites was what I wanted for myself, and I took the time to attend a bootcamp in programming to get better and learn more.<br>
-                Through this learning journey that continues to this day, I am happy and I continue to apply the same principles to what is finally my job today.<br><br>
+                I realized then that making websites was what I truly wanted to do, and I decided to attend a programming bootcamp to get better and learn more.<br>
+                Through this learning journey that continues to this day, I am happy and I continue to apply the same principles to what has now become my job.<br><br>
               </p>
               <p>
-                <span class="text-pink-500 font-bold">Re-source-ful</span>
-                <i>  — Having the ability to find clever ways to overcome difficulties.</i>
+                <span class="text-pink-500 font-bold">Re-source-ful:</span>
+                <i> Having the ability to find clever ways to overcome difficulties.</i>
               </p>
             </div>
             <div class="mt-8">
@@ -621,7 +621,7 @@ export default {
           <div class="space-y-8 sm:space-y-12">
             <div class="space-y-5 sm:space-y-4 text-right">
               <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
-              <p class="text-3xl font-semibold tracking-tight text-gray-900">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and convert new leads, and provides a great user experience.</p>
+              <p class="text-3xl font-semibold tracking-tight text-gray-900">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and converts new leads, and provides a great user experience.</p>
             </div>
             <div class="text-center pt-20">
               <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
@@ -648,28 +648,28 @@ export default {
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-white">
-              As your partner I do my best, but what’s more important is how I will help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there — we do it together as one single, cohesive team.
+              As your partner, my focus goes beyond just building a website. Whether it’s aligning on your business challenge, understanding the people you need to reach, or defining the best process to get there, we do it together as one cohesive team.
             </p>
 
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
               No matter what level of web expertise you have, the whole development process will be simple and manageable.
             </p>
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I don’t want to lure you with empty promises and hyperbole. Instead, I prefer results.
+              I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.
             </p>
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I know how important your web presence is, and that’s why I’m committed every day to delivering the best result.
+              I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.
             </p>
           </div>
         </div>
         <form ref="form" @submit.prevent="sendEmail">
           <div class="container px-2 py-12 mx-auto flex">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 pt-12 pb-12 pl-6 pr-6">
-              <h2 class="text-4xl font-bold tracking-tight sm:text-6x text-black mb-1 ">Get in touch!</h2>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-6xl text-black mb-1 ">Get in touch!</h2>
               <p class="text-3xl font-semibold tracking-tight">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
               <div class="relative mb-4 mt-5">
                 <label for="name" class="text-sm sm:text-lg leading-8 text-black font-semibold">Name / Company</label>
-                <input v-model="name" type="text" id="name" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                <input v-model="name" type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
               </div>
               <div class="relative mb-4">
                 <label for="email" class="text-sm sm:text-lg leading-8 text-black font-semibold">Email</label>
