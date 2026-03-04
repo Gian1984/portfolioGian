@@ -47,27 +47,43 @@ export default {
             return [
                 {
                     name: 'JS',
-                    imageSrc: './img/logos/js.png',
+                    imageSrc: './img/logos/js.webp',
                 },
                 {
                     name: 'VueJS',
-                    imageSrc: './img/logos/vuejs.png',
+                    imageSrc: './img/logos/vuejs.webp',
                 },
                 {
                     name: 'Php',
-                    imageSrc: './img/logos/php.png',
+                    imageSrc: './img/logos/php.webp',
                 },
                 {
                     name: 'Laravel',
-                    imageSrc: './img/logos/laravel.png'
+                    imageSrc: './img/logos/laravel.webp'
                 },
                 {
                     name: 'TailwindCss',
-                    imageSrc: './img/logos/tailwind.png'
+                    imageSrc: './img/logos/tailwind.webp'
                 },
               {
-                name: 'TailwindCss',
-                imageSrc: './img/logos/wordpress.png'
+                name: 'WordPress',
+                imageSrc: './img/logos/wordpress.webp'
+              },
+              {
+                name: 'Bootstrap',
+                imageSrc: './img/logos/bootstrap-social-logo-optimized.webp'
+              },
+              {
+                name: 'CSS3',
+                imageSrc: './img/logos/CSS3_logo_and_wordmark.svg-optimized.webp'
+              },
+              {
+                name: 'HTML5',
+                imageSrc: './img/logos/HTML5_logo_and_wordmark-optimized.webp'
+              },
+              {
+                name: 'Nuxt',
+                imageSrc: './img/logos/nuxt-logo-optimized.webp'
               },
             ]
         },
@@ -75,100 +91,100 @@ export default {
       projects(){
             return [
                 {
-                    name: 'Claudio Fava',
-                    role: 'Architect',
-                    imageUrl:'./img/logos/logo_fava_border.png',
-                    href: 'https://www.favaclaudio.com/'
+                  name: 'CodeHelper.me',
+                  role: '100+ privacy-first tools, 800+ curated resources and 400+ public APIs for developers',
+                  imageUrl:'./img/logos/codehelper_logo.webp',
+                  href:'https://codehelper.me/',
                 },
                 {
                   name: 'Undiscover.me',
                   role: 'Make sure your new website shows the best of you',
-                  imageUrl:'./img/logos/undiscoverme.png',
+                  imageUrl:'./img/logos/undiscoverme.webp',
                   href:'https://www.undiscover.me/',
                 },
                 {
                   name: 'Unlistened.me',
                   role: 'Latest podcasts experience',
-                  imageUrl:'./img/logos/unlistened_transparen_logo_176.png',
+                  imageUrl:'./img/logos/unlistened_transparen_logo_176.webp',
                   href:'https://www.unlistened.me/',
+                },
+                {
+                    name: 'Claudio Fava',
+                    role: 'Architect',
+                    imageUrl:'./img/logos/logo_fava_border.webp',
+                    href: 'https://www.favaclaudio.com/'
+                },
+                {
+                    name: 'The National Venue Brussels',
+                    role: 'The exclusive event address at the gates of Brussels',
+                    imageUrl:'./img/logos/theNationalVenue_logo-optimized.webp',
+                    href:'https://www.thenationalvenuebrussels.com/',
+                },
+                {
+                    name: 'Artfood',
+                    role: 'Refined catering experiences crafted with authenticity, balance and respect for the environment',
+                    imageUrl:'./img/logos/artfood_traiteur_logo-optimized.webp',
+                    href:'https://www.artfood.be/',
+                },
+                {
+                    name: 'Mancala Travel',
+                    role: 'French-speaking travel specialists for tailor-made trips across Southern Africa',
+                    imageUrl:'./img/logos/mancala_logo_new-optimized.webp',
+                    href:'https://www.mancalatravel.com/',
+                },
+                {
+                    name: 'Brusano',
+                    role: 'Brussels palliative care platform',
+                    imageUrl:'./img/logos/brusano_logo_350px.webp',
+                    href:'https://www.brusano.brussels/',
                 },
                 {
                     name: 'Pizza Vino',
                     role: 'Best pizza in BXL',
-                    imageUrl:'./img/logos/pizza-vino-logo.png',
+                    imageUrl:'./img/logos/pizza-vino-logo.webp',
                     href:'https://pizzavino.be/',
-                },
-                {
-                    name: 'Let You Dev',
-                    role: 'Platform for personal growth in programming',
-                    imageUrl:'./img/logos/letudev.png',
-                    href:'https://letudev.com/',
-                },
-                {
-                  name: 'Magritte',
-                  role: 'Plongez dans l’univers surréaliste de René Magritte',
-                  imageUrl:'./img/logos/magrittelogo.png',
-                  href:'https://magritte.com/',
                 },
                 {
                     name: 'Panoptès',
                     role: 'Art collection',
-                    imageUrl:'./img/logos/panoptes.png',
+                    imageUrl:'./img/logos/panoptes.webp',
                     href:'https://www.panoptes.art/',
                 },
                 {
                     name: 'La Villa In The Sky',
-                    role: 'Expérience culinaire de haute voltige',
-                    imageUrl:'./img/logos/lavilla.png',
+                    role: 'High-flying fine dining experience in Brussels',
+                    imageUrl:'./img/logos/lavilla.webp',
                     href:'https://www.lavillainthesky.be/',
                 },
                 {
                     name: 'Quendra',
                     role: 'European telecom consulting company',
-                    imageUrl:'./img/logos/quendra.png',
+                    imageUrl:'./img/logos/quendra.webp',
                     href:'https://www.quendra.com/',
                 },
                 {
-                  name: 'Bioholistic',
+                  name: 'DistriCare Pharma SRL',
                   role: 'Belgian group at the service of health',
-                  imageUrl:'./img/logos/logoBio.png',
-                  href:'https://www.bioholistic.be/',
+                  imageUrl:'./img/logos/districare_logo-optimized.webp',
+                  href:'https://www.districare.be/',
                 },
                 {
                   name: 'Unikpools',
                   role: 'Exclusive swimming pool',
-                  imageUrl:'./img/logos/unik.png',
+                  imageUrl:'./img/logos/unik.webp',
                   href:'https://www.unikpools.com/',
                 },
                 {
                   name: 'Colonel Gustave',
-                  role: 'Croquettes saines pour chiens et chats',
-                  imageUrl:'./img/logos/colonel.png',
+                  role: 'Healthy and natural food for dogs and cats',
+                  imageUrl:'./img/logos/colonel.webp',
                   href:'https://www.colonelgustave.com/',
                 },
                 {
                   name: 'L\'Artigiano della farina',
-                  role: 'La création de pains et de pizzas.',
-                  imageUrl:'./img/logos/logoartigiano.png',
+                  role: 'Artisan bread and pizza maker',
+                  imageUrl:'./img/logos/logoartigiano.webp',
                   href:'https://www.artigianodellafarina.be/',
-                },
-                {
-                    name: 'Odette en Ville',
-                    role: 'Hotel-restaurant',
-                    imageUrl:'./img/logos/odette.png',
-                    href:'https://www.odetteenville.be/',
-                },
-                {
-                    name: 'Brusano',
-                    role: 'Brussels palliative care platform',
-                    imageUrl:'./img/logos/brusano_logo_350px.png',
-                    href:'https://www.brusano.brussels/',
-                },
-                {
-                    name: '4 Venture',
-                    role: 'Privately-held investment fund',
-                    imageUrl:'./img/logos/4ventures-3.png',
-                    href:'https://www.4ventures.be/',
                 },
                 // More people...
             ]
@@ -204,7 +220,7 @@ export default {
                 },
                 {
                     name: 'Hosting',
-                    description: 'Administrate hosting service, manage your email accounts or setup a Wordpress instance.',
+                    description: 'Administer hosting services, manage your email accounts or set up a WordPress instance.',
                     icon: ServerIcon,
                 },
             ]
@@ -220,7 +236,7 @@ export default {
                     date: 'Mar 16, 2020',
                     datetime: '2020-03-16',
                     category: { name: 'Stage 1' },
-                    image:'./img/logos/map.png',
+                    image:'./img/logos/map.webp',
                     preview:
                         'To define the vision of a product or service, I take the time to listen to you and understand your needs and those of your customers. I write a document with the technical specifications, some mockups, a program and a budget estimate.',
                 },
@@ -231,7 +247,7 @@ export default {
                     date: 'Mar 10, 2020',
                     datetime: '2020-03-10',
                     category: { name: 'Stage 2' },
-                    image:'./img/logos/prototyping.png',
+                    image:'./img/logos/prototyping.webp',
                     preview:
                         'There is no universal and precise formula, because each project can have different characteristics. At the beginning we have to define objectives and potential critical issues, after which we move on to the conception of the product and then to the creation of a prototype.',
                 },
@@ -242,7 +258,7 @@ export default {
                     date: 'Feb 12, 2020',
                     datetime: '2020-02-12',
                     category: { name: 'Stage 3' },
-                    image:'./img/logos/developer.png',
+                    image:'./img/logos/developer.webp',
                     preview:
                         'Do you have the vision, feel the pull and all you need is software? I will work with you to develop this new functional and design product that your customers will love to use. And I\'ll help you get started.',
                 },
@@ -259,8 +275,17 @@ export default {
             email: '',
             message: '',
             confirmation:'',
-            chaptcha:'',
+            turnstileToken: '',
         }
+    },
+
+    created() {
+        window.onTurnstileSuccess = (token) => {
+            this.turnstileToken = token;
+        };
+        window.onTurnstileExpired = () => {
+            this.turnstileToken = '';
+        };
     },
 
     methods: {
@@ -275,13 +300,17 @@ export default {
             } catch (error) {
                 console.log({error})
             }
-            // Reset form field
-            this.name = '',
-                this.subject = '',
-                this.email = '',
-                this.message = ''
-            this.chaptcha = ''
-            this.confirmation = 'Your messase has been sent!'
+            // Reset form fields
+            this.name = '';
+            this.subject = '';
+            this.email = '';
+            this.message = '';
+            this.turnstileToken = '';
+            this.confirmation = 'Your message has been sent!';
+        },
+
+        scrolltocontact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         },
 
         closeAlert: function(){
@@ -310,7 +339,7 @@ export default {
             @enter="enter"
         >
           <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
-            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="mailto:gl.tiengo@gmail.com" aria-label="mail to Gianluca Tiengo"  class="text-pink-500">here</a>.
+            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="#contact" @click.prevent="scrolltocontact()" aria-label="Go to contact form" class="text-pink-500 cursor-pointer">here</a>.
           </h2>
         </transition>
       </div>
@@ -339,10 +368,10 @@ export default {
             <div class="text-base leading-7 text-gray-700">
               <h2 id="skills" class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills & Experience</h2>
               <div>
-                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create successful responsive website that are fast, easy to use, and build with the best practices. The main area of expertise is full-stack development HTML, CSS, JS, PHP, building small and medium web apps, animations. I have also experience with popular open-source CMS like Wordpress.</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">As developer I understand the importance to share knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
-                <p class="mt-8 text-xl leading-8 text-black font-semibold">Here bellow you can find some important resources that I've collected during my experience and that i want to share. I am not affiliated with any of it, I am just using them personally and would want to share it with you, especially to all self-taught developer.</p>
-                <a href="https://letudev.com/" target="_blank" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900">I create successful responsive websites that are fast, easy to use, and built with the best practices. The main area of expertise is full-stack development — HTML, CSS, JS, PHP — building small and medium web apps and animations. I also have experience with popular open-source CMS like WordPress.</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">As a developer I understand the importance of sharing knowledge. If only one person knows how to do something, that prevents others from developing and hinders progress. When you manage knowledge and give people a platform to share and access it, you’re opening the door to a whole host of benefits!</p>
+                <p class="mt-8 text-xl leading-8 text-black font-semibold">Here below you can find some important resources that I’ve collected during my experience and that I want to share. I am not affiliated with any of them — I am just using them personally and would love to share them with you, especially with all self-taught developers.</p>
+                <a href="https://letudev.com/" target="_blank" rel="noopener noreferrer" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                   <span class="flex">
                     <span class="flex mt-0.5">I'm curious</span>
                     <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
@@ -360,13 +389,13 @@ export default {
         <div class="mx-auto md:grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none  lg:gap-y-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-5xl max-w-full lg:pb-8 ">
             <h2 id="kindof" class="text-4xl font-bold text-gray-900 sm:text-6xl">
-              Websites Ecommerce<br> Web Application
+              Websites · E-commerce<br> Web Applications
             </h2>
-            <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6x">
-              I design and develop responsive brochure websites to showcase your products and services in alignment with your brand essence, your target audience and your preferences. My websites follow the latest design trends to ensure they’re up to date for years to come.
+            <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+              I design and develop responsive brochure websites to showcase your products and services in alignment with your brand essence, your target audience and your preferences. My websites follow the latest design trends to ensure they stay relevant for years to come.
             </p>
             <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
-              In addition to designing a beautiful, trendy and modern-looking website that fits with your brand, i will also take care of all technical aspects of the e-commerce side to ensure that everything works without issues. I can set up smooth payment systems, integrations and subscriptions.
+              In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works without issues. I can set up smooth payment systems, integrations and subscriptions.
             </p>
             <p class="mt-6 text-xl font-semibold leading-8 text-black-600">
               I deliver web-based applications that help organizations to keep pace with constantly changing business needs. Such applications boast quick and easy access from anywhere on the Internet, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.
@@ -380,7 +409,7 @@ export default {
                   data-fancybox="gallery"
                   data-caption="https://www.favaclaudio.com/"
               >
-                <img src="../assets/favascreen.webp" alt="https://www.favaclaudio.com/" class="aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover" />
+                <img src="../assets/favascreen.webp" alt="Screenshot of the Claudio Fava architect website" class="aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
               </a>
             </div>
             <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
@@ -391,7 +420,7 @@ export default {
                     aria-label="visit https://www.bioholistic.be/"
                     data-caption="https://www.bioholistic.be/"
                 >
-                  <img src="../assets/bioscreen.webp" alt="https://www.bioholistic.be/" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" />
+                  <img src="../assets/bioscreen.webp" alt="Screenshot of the Bioholistic health platform website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
               <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
@@ -401,7 +430,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://magritte.com/"
                 >
-                  <img src="../assets/magrittescreen.webp" alt="https://magritte.com/" class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50 object-cover" />
+                  <img src="../assets/magrittescreen.webp" alt="Screenshot of the René Magritte surrealist art website" class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
@@ -411,7 +440,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://www.colonelgustave.com/"
                 >
-                <img src="../assets/colonelscreen.webp" alt="https://www.colonelgustave.com/" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" />
+                <img src="../assets/colonelscreen.webp" alt="Screenshot of the Colonel Gustave pet food website" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -426,7 +455,7 @@ export default {
           Everything you need<br> to deploy your app
         </h2>
         <p class="mt-5 mb-4 text-3xl font-semibold tracking-tight text-gray-900">
-          My approach to website development fuses creativity,<br> technology and data analysis,<br> giving you the platform you.
+          My approach to website development fuses creativity,<br> technology and data analysis,<br> giving you the platform you need.
         </p>
         <div class="mt-12">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -450,11 +479,11 @@ export default {
       </div>
     </div>
 
-    <div class="bg-gray-900 py-12 sm:py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
-          <div v-for="category in galleries" :key="category.name" class="bg-white/5 p-8 sm:p-10">
-            <img class="max-h-24 w-full object-contain" :src="category.imageSrc" :alt="category.name" />
+    <div class="bg-black py-12 sm:py-16 overflow-hidden">
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div v-for="(category, index) in [...galleries, ...galleries, ...galleries, ...galleries]" :key="category.name + index" class="marquee-item">
+            <img :src="category.imageSrc" :alt="category.name" class="max-h-16 w-auto object-contain" loading="lazy" />
           </div>
         </div>
       </div>
@@ -465,7 +494,7 @@ export default {
           <div class="px-6 pb-12 pt-12 sm:pt-60 lg:px-8 lg:pt-32 lg:pb-32">
             <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h1>
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h2>
                 <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:max-w-md lg:max-w-none">Depending on the type of project, the basic steps of building a website can vary. Not all websites are the same. Different types of management and planning are required.</p>
                 <div v-for="step in staeps" :key="step.id">
                   <div class="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -490,7 +519,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.anamkitchen.be/"
                     >
-                      <img src="../assets/anamscreen.webp" alt="Anam Kitchen" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/anamscreen.webp" alt="Screenshot of the Anam Kitchen restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -503,7 +532,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.bassin-nord.brussels/agenda/"
                     >
-                      <img src="../assets/bassin.webp" alt="Bassin Nord" class="w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/bassin.webp" alt="Screenshot of the Bassin Nord Brussels website" class="w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -514,7 +543,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://undiscover.me/"
                     >
-                      <img src="../assets/undiscoverscreen.webp" alt="Undiscover.me" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/undiscoverscreen.webp" alt="Screenshot of the Undiscover.me personal website platform" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -527,7 +556,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.colonelgustave.com/"
                     >
-                      <img src="../assets/colonelmobilescreen.webp" alt="Colonel Gustave" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/colonelmobilescreen.webp" alt="Screenshot of the Colonel Gustave website on mobile" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -538,7 +567,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.pizzavino.be/"
                     >
-                      <img src="../assets/pizzascreen.webp" alt="Pizza Vino" class=" w-full bg-gray-900/5 object-cover shadow-lg" />
+                      <img src="../assets/pizzascreen.webp" alt="Screenshot of the Pizza Vino restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -562,8 +591,8 @@ export default {
           <blockquote class="relative">
             <div class="text-xl sm:text-3xl font-semibold tracking-tight text-white">
               <p class="text-left">
-                One of the important skills as a Self-taught developer is to be resourceful, my father taught me this skill when I was still very young, and I didn’t know it would take me far in life.
-                I started with wordpress for fun, and my curiosity led me to my first HTML / CSS site. Working during the day, at night I took courses on SoloLearn and all the online platforms that could satiate my desire to learn.
+                One of the most important skills as a self-taught developer is to be resourceful. My father taught me this when I was still very young, and I didn’t know it would take me so far in life.
+                I started with WordPress for fun, and my curiosity led me to my first HTML / CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.
               </p>
               <p class="text-left mt-6">
                 I realized then that making websites was what I wanted for myself, and I took the time to attend a bootcamp in programming to get better and learn more.<br>
@@ -577,7 +606,7 @@ export default {
             <div class="mt-8">
               <div class="flex">
                 <div class="flex-shrink-0 lg:hidden">
-                  <img class="h-12 w-12 rounded-full" src="../assets/gian.jpg" alt="gianluca_tiengo" />
+                  <img class="h-12 w-12 rounded-full" src="../assets/gian.webp" alt="Gianluca Tiengo" />
                 </div>
               </div>
             </div>
@@ -597,8 +626,8 @@ export default {
             <div class="text-center pt-20">
               <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
                 <li v-for="project in projects" :key="project.name">
-                  <a :href="project.href" :aria-label="project.name" target="_blank" class="space-y-4">
-                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" alt="single project image" />
+                  <a :href="project.href" :aria-label="project.name" target="_blank" rel="noopener noreferrer" class="space-y-4">
+                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" :alt="project.name + ' logo'" />
                     <div class="space-y-2">
                       <div class="text-xs font-medium lg:text-sm">
                         <h3 class="text-xl leading-8 font-semibold text-black-600">{{ project.name }}</h3>
@@ -619,17 +648,17 @@ export default {
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 id="contact" class="text-4xl font-bold tracking-tight sm:text-6xl text-white">Are you ready?</h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-white">
-              As your partner i do my best, but what's more important is how i will try help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there, we do it together as one single, cohesive team.
+              As your partner I do my best, but what’s more important is how I will help you move forward. Whether it’s to better align on your business challenge, understand the people you need to reach, or define the best process to get there — we do it together as one single, cohesive team.
             </p>
 
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              No matter what level of web expertise you have, the whole process of development will be simple and manageable.
+              No matter what level of web expertise you have, the whole development process will be simple and manageable.
             </p>
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I dont want to lure you with empty promises and hyperbole. Instead, i prefer results.
+              I don’t want to lure you with empty promises and hyperbole. Instead, I prefer results.
             </p>
             <p class="mt-6 text-xl leading-8 font-semibold text-white">
-              I know how important is the presence on the web for you, and that's why I'm committed every day to ensure the best result.
+              I know how important your web presence is, and that’s why I’m committed every day to delivering the best result.
             </p>
           </div>
         </div>
@@ -655,10 +684,15 @@ export default {
                 <textarea v-model="message" id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
               </div>
               <div class="relative mb-4">
-                <label for="chaptcha" class="text-sm sm:text-lg leading-8 text-black font-semibold">CAPTCHA verification: 6 + 6 = ?</label>
-                <input v-model="chaptcha" name="chaptcha" id="chaptcha" type="text" class="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                <!-- Replace YOUR_TURNSTILE_SITE_KEY with your key from dash.cloudflare.com/turnstile -->
+                <div
+                  class="cf-turnstile"
+                  data-sitekey="0x4AAAAAACmDmw9moS3XzJjw"
+                  data-callback="onTurnstileSuccess"
+                  data-expired-callback="onTurnstileExpired"
+                ></div>
               </div>
-              <button v-if="chaptcha == 12" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+              <button v-if="turnstileToken" type="submit" value="Send" class="mt-4 w-24 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 <span class="flex">
                   <span class="flex mt-0.5">Send</span>
                   <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
@@ -693,4 +727,32 @@ export default {
     </div>
 
 </template>
+
+<style scoped>
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  padding: 2rem 3rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+</style>
 

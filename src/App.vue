@@ -28,7 +28,7 @@ const footerNavigation = {
         },
         {
             name: 'Instagram',
-            href: 'https://www.instagram.com/let_you_dev/',
+            href: 'https://www.instagram.com/codehelper.me/',
             icon: defineComponent({
                 render: () =>
                     h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -100,13 +100,13 @@ const slide = (el, done) => {
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Gianluca Tiengo Web Devel0per</span>
+          <span class="sr-only">Gianluca Tiengo Web Developer</span>
           <transition
               appear
               @before-enter="beforeSlide"
               @enter="slide"
           >
-          <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.png" alt="Gianluca Tiengo Web Developer Logo" />
+          <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </transition>
         </a>
       </div>
@@ -132,7 +132,7 @@ const slide = (el, done) => {
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.png" alt="Gianluca Tiengo Web Developer Logo" />
+            <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </a>
           <button type="button" id="close" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
@@ -169,7 +169,7 @@ const slide = (el, done) => {
                         </h3>
                         <div class="my-6 text-center">
                             <div class="flex space-x-6">
-                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" target="_blank" class="bg-white rounded-full p-2 outline-none text-pink-500 hover:text-teal-600">
+                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" target="_blank" rel="noopener noreferrer" class="bg-white rounded-full p-2 outline-none text-pink-500 hover:text-teal-600">
                                     <span class="sr-only">{{ item.name }}</span>
                                     <component :is="item.icon" class="h-6 w-6 sm:h-8 sm:w-8" aria-hidden="true" />
                                 </a>
@@ -184,7 +184,7 @@ const slide = (el, done) => {
                 <div class="flex flex-wrap items-center md:justify-between justify-center" >
                     <div class="w-full md:w-4/12 px-4 mx-auto text-center">
                         <div class="text-sm text-gray-900 font-semibold py-1">
-                            Copyright © 2024 Gianluca Tiengo.
+                            Copyright © 2026 Gianluca Tiengo.
                         </div>
                     </div>
                 </div>
