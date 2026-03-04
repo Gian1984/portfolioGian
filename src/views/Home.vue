@@ -276,6 +276,8 @@ export default {
             message: '',
             confirmation:'',
             turnstileToken: '',
+            turnstileWidgetId: null,
+            activeProject: null,
         }
     },
 
@@ -294,8 +296,13 @@ export default {
     },
 
     methods: {
+        toggleProject(index) {
+            this.activeProject = this.activeProject === index ? null : index;
+        },
+
         renderTurnstile() {
-            window.turnstile.render('#turnstile-widget', {
+            if (this.turnstileWidgetId !== null) return;
+            this.turnstileWidgetId = window.turnstile.render('#turnstile-widget', {
                 sitekey: '0x4AAAAAACmDmw9moS3XzJjw',
                 callback: (token) => { this.turnstileToken = token; },
                 'expired-callback': () => { this.turnstileToken = ''; },
@@ -397,11 +404,12 @@ export default {
       </div>
     </div>
 
+    <div id="kindof"></div>
     <div class="overflow-hidden bg-white py-10 sm:py-32">
       <div class="mx-auto max-w-full px-6 lg:flex lg:px-8">
         <div class="mx-auto md:grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none  lg:gap-y-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-5xl max-w-full lg:pb-8 ">
-            <h2 id="kindof" class="text-4xl font-bold text-gray-900 sm:text-6xl">
+            <h2 class="text-4xl font-bold text-gray-900 sm:text-6xl">
               Websites · E-commerce<br> Web Applications
             </h2>
             <p class="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
@@ -636,19 +644,62 @@ export default {
               <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
               <p class="text-3xl font-semibold tracking-tight text-gray-900">Whichever platform you choose,<br> I’ll make sure your new website shows the best of you,<br> attracts and converts new leads, and provides a great user experience.</p>
             </div>
-            <div class="text-center pt-20">
-              <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:gap-x-16 lg:gap-y-12 xl:grid-cols-4">
-                <li v-for="project in projects" :key="project.name">
-                  <a :href="project.href" :aria-label="project.name" target="_blank" rel="noopener noreferrer" class="space-y-4">
-                    <img class="mx-auto h-24 w-24 rounded-full shadow-2xl lg:w-32 lg:h-32 p-1" :src="project.imageUrl" :alt="project.name + ' logo'" />
-                    <div class="space-y-2">
-                      <div class="text-xs font-medium lg:text-sm">
-                        <h3 class="text-xl leading-8 font-semibold text-black-600">{{ project.name }}</h3>
+            <div class="pt-16">
+              <div class="divide-y divide-gray-200">
+                <div
+                  v-for="(project, index) in projects"
+                  :key="project.name"
+                  class="group cursor-pointer"
+                  @click="toggleProject(index)"
+                >
+                  <!-- Row header -->
+                  <div
+                    class="flex items-center justify-between py-5 px-2 transition-colors duration-300"
+                    :class="activeProject === index ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-pink-500 hover:text-white'"
+                  >
+                    <div class="flex items-center gap-6">
+                      <span class="text-sm font-mono opacity-40 min-w-[2.5rem]">{{ String(index + 1).padStart(2, '0') }}.</span>
+                      <h3 class="text-xl sm:text-2xl font-bold tracking-tight">{{ project.name }}</h3>
+                    </div>
+                    <div class="flex items-center gap-3 flex-shrink-0">
+                      <span class="text-xs font-semibold uppercase tracking-widest hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        Visit
+                      </span>
+                      <ArrowRightIcon
+                        class="h-5 w-5 transition-transform duration-300"
+                        :class="activeProject === index ? 'rotate-90' : ''"
+                      />
+                    </div>
+                  </div>
+                  <!-- Expanded content -->
+                  <div
+                    class="overflow-hidden transition-all duration-500 ease-in-out"
+                    :style="{ maxHeight: activeProject === index ? '300px' : '0px' }"
+                  >
+                    <div class="flex items-start gap-8 px-4 py-6 bg-gray-50 border-l-4 border-pink-500">
+                      <img
+                        :src="project.imageUrl"
+                        :alt="project.name + ' logo'"
+                        class="h-14 w-14 sm:h-16 sm:w-16 rounded-xl object-contain bg-white shadow-md flex-shrink-0 p-2"
+                        loading="lazy"
+                      />
+                      <div class="flex-1 min-w-0">
+                        <p class="text-gray-700 font-medium mb-3">{{ project.role }}</p>
+                        <a
+                          :href="project.href"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-2 text-pink-500 font-semibold hover:text-pink-700 transition-colors text-sm"
+                          @click.stop
+                        >
+                          {{ project.href.replace('https://', '').replace('www.', '').replace(/\/$/, '') }}
+                          <ArrowRightIcon class="h-4 w-4" />
+                        </a>
                       </div>
                     </div>
-                  </a>
-                </li>
-              </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
