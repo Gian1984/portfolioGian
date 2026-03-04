@@ -345,7 +345,7 @@ export default {
 <template>
 
     <div class="bg-white">
-      <div class="mx-auto px-6 pt-60 pb-20 sm:pt-80 sm:pb-40 lg:px-8">
+      <div class="mx-auto px-6 pt-36 pb-20 sm:pt-80 sm:pb-40 lg:px-8">
         <transition
             appear
             @before-enter="beforeEnter"
@@ -399,11 +399,9 @@ export default {
                     <p class="text-base leading-7 text-black">I built CodeHelper.me as a side project: a collection of tools and articles I created myself, alongside curated external resources I use daily. Everything is free. If you are a self-taught developer or just curious, take a look.</p>
                   </div>
                 </div>
-                <a href="https://www.codehelper.me/" target="_blank" rel="noopener noreferrer" class="mt-8 w-36 flex bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                  <span class="flex">
-                    <span class="flex mt-0.5">I'm curious</span>
-                    <ArrowRightIcon class="ml-2 h-5 w-5"></ArrowRightIcon>
-                  </span>
+                <a href="https://www.codehelper.me/" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-black border border-black px-4 py-2 hover:bg-black hover:text-white transition-colors duration-300">
+                  I'm curious
+                  <ArrowRightIcon class="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -507,10 +505,19 @@ export default {
     </div>
 
     <div class="bg-black py-12 sm:py-16 overflow-hidden">
-      <div class="marquee-wrapper">
-        <div class="marquee-track">
-          <div v-for="(category, index) in [...galleries, ...galleries, ...galleries, ...galleries]" :key="category.name + index" class="marquee-item">
-            <img :src="category.imageSrc" :alt="category.name" class="max-h-16 w-auto object-contain" loading="lazy" />
+      <div class="marquee-outer">
+        <div class="marquee-wrapper mb-8">
+          <div class="marquee-track">
+            <div v-for="(category, index) in [...galleries, ...galleries, ...galleries, ...galleries]" :key="'a' + category.name + index" class="marquee-item">
+              <img :src="category.imageSrc" :alt="category.name" class="marquee-logo max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="marquee-wrapper">
+          <div class="marquee-track marquee-track--reverse">
+            <div v-for="(category, index) in [...galleries, ...galleries, ...galleries, ...galleries]" :key="'b' + category.name + index" class="marquee-item">
+              <img :src="category.imageSrc" :alt="category.name" class="marquee-logo max-h-12 w-auto object-contain" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>
@@ -772,6 +779,11 @@ export default {
 </template>
 
 <style scoped>
+.marquee-outer {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
@@ -781,16 +793,32 @@ export default {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: marquee 18s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
-.marquee-track:hover {
+.marquee-track--reverse {
+  animation-direction: reverse;
+  animation-duration: 28s;
+}
+
+.marquee-wrapper:hover .marquee-track {
   animation-play-state: paused;
 }
 
 .marquee-item {
   flex-shrink: 0;
-  padding: 2rem 3rem;
+  padding: 1.25rem 2.5rem;
+}
+
+.marquee-logo {
+  opacity: 0.45;
+  filter: grayscale(100%) brightness(1.4);
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.marquee-item:hover .marquee-logo {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1) drop-shadow(0 0 10px rgba(236, 72, 153, 0.65));
 }
 
 @keyframes marquee {

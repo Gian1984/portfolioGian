@@ -106,23 +106,25 @@ const slide = (el, done) => {
               @before-enter="beforeSlide"
               @enter="slide"
           >
-          <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
+          <img class="h-20 lg:h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </transition>
         </a>
       </div>
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
+        <button type="button" class="inline-flex flex-col items-end justify-center gap-1.5 p-2.5" @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
-          <Bars3Icon class="h-10 w-10 text-black" aria-hidden="true" />
+          <span class="block h-0.5 w-6 bg-black"></span>
+          <span class="block h-0.5 w-4 bg-pink-500"></span>
+          <span class="block h-0.5 w-5 bg-black"></span>
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <button v-on:click="scrolltoskills()" class="text-sm font-semibold leading-6 text-gray-900">Skills</button>
-        <button v-on:click="scrolltokindof()" class="text-sm font-semibold leading-6 text-gray-900">Kind of</button>
-        <button v-on:click="scrolltoatwork()" class="text-sm font-semibold leading-6 text-gray-900">At work</button>
-        <button v-on:click="scrolltophilosophy()" class="text-sm font-semibold leading-6 text-gray-900">Philosophy</button>
-        <button v-on:click="scrolltoprojects()" class="text-sm font-semibold leading-6 text-gray-900">Projects</button>
-        <button v-on:click="scrolltocontact()" class="text-sm font-semibold leading-6 text-gray-900">Contact</button>
+      <div class="hidden lg:flex lg:gap-x-8 lg:items-center">
+        <button v-on:click="scrolltoskills()" class="font-mono text-xs uppercase tracking-widest text-black hover:text-pink-500 transition-colors duration-200">Skills</button>
+        <button v-on:click="scrolltokindof()" class="font-mono text-xs uppercase tracking-widest text-black hover:text-pink-500 transition-colors duration-200">Kind of</button>
+        <button v-on:click="scrolltoatwork()" class="font-mono text-xs uppercase tracking-widest text-black hover:text-pink-500 transition-colors duration-200">At work</button>
+        <button v-on:click="scrolltophilosophy()" class="font-mono text-xs uppercase tracking-widest text-black hover:text-pink-500 transition-colors duration-200">Philosophy</button>
+        <button v-on:click="scrolltoprojects()" class="font-mono text-xs uppercase tracking-widest text-black hover:text-pink-500 transition-colors duration-200">Projects</button>
+        <button v-on:click="scrolltocontact()" class="font-mono text-xs uppercase tracking-widest text-black border border-black px-3 py-1.5 hover:border-pink-500 hover:text-pink-500 transition-colors duration-200">Contact</button>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
     </nav>
@@ -132,22 +134,25 @@ const slide = (el, done) => {
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
+            <img class="h-20 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </a>
-          <button type="button" id="close" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+          <button type="button" id="close" class="p-2.5" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
-            <XMarkIcon class="h-10 w-10 text-black" aria-hidden="true" />
+            <span class="relative flex items-center justify-center w-5 h-5" aria-hidden="true">
+              <span class="absolute block h-0.5 w-5 bg-black rotate-45"></span>
+              <span class="absolute block h-0.5 w-5 bg-pink-500 -rotate-45"></span>
+            </span>
           </button>
         </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <button @click="drawer()" v-on:click="scrolltoskills()" class="block text-3xl font-semibold tracking-tight text-gray-900">Skills</button>
-              <button @click="drawer()" v-on:click="scrolltokindof()" class="block text-3xl font-semibold tracking-tight text-gray-900">Kind of</button>
-              <button @click="drawer()" v-on:click="scrolltoatwork()" class="block text-3xl font-semibold tracking-tight text-gray-900">At work</button>
-              <button @click="drawer()" v-on:click="scrolltophilosophy()" class="block text-3xl font-semibold tracking-tight text-gray-900">Philosophy</button>
-              <button @click="drawer()" v-on:click="scrolltoprojects()" class="block text-3xl font-semibold tracking-tight text-gray-900">Projects</button>
-              <button @click="drawer()" v-on:click="scrolltocontact()" class="block text-3xl font-semibold tracking-tight text-gray-900">Contact</button>
+        <div class="mt-10 flow-root">
+          <div class="divide-y divide-gray-100">
+            <div class="space-y-1 py-6">
+              <button @click="drawer()" v-on:click="scrolltoskills()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Skills</button>
+              <button @click="drawer()" v-on:click="scrolltokindof()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Kind of</button>
+              <button @click="drawer()" v-on:click="scrolltoatwork()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">At work</button>
+              <button @click="drawer()" v-on:click="scrolltophilosophy()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Philosophy</button>
+              <button @click="drawer()" v-on:click="scrolltoprojects()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Projects</button>
+              <button @click="drawer()" v-on:click="scrolltocontact()" class="mt-4 block w-full text-center font-mono text-sm uppercase tracking-widest text-black border border-black px-4 py-2.5 hover:border-pink-500 hover:text-pink-500 transition-colors duration-200">Contact</button>
             </div>
           </div>
         </div>
