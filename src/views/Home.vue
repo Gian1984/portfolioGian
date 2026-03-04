@@ -345,7 +345,7 @@ export default {
 <template>
 
     <div class="bg-white">
-      <div class="mx-auto px-6 pt-36 pb-8 sm:pt-80 sm:pb-40 lg:px-8">
+      <div class="mx-auto px-6 pt-36 pb-8 sm:pt-64 sm:pb-32 lg:px-8">
         <transition
             appear
             @before-enter="beforeEnter"
@@ -755,7 +755,7 @@ export default {
                 <div id="turnstile-widget"></div>
               </div>
               <div>
-                <button v-if="turnstileToken" type="submit" class="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-white border border-white px-6 py-3 hover:bg-white hover:text-black transition-colors duration-300">
+                <button v-if="turnstileToken" type="submit" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white border border-white px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">
                   Send
                   <ArrowRightIcon class="h-4 w-4" />
                 </button>
