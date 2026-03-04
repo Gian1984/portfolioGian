@@ -345,7 +345,7 @@ export default {
 <template>
 
     <div class="bg-white">
-      <div class="mx-auto px-6 pt-36 pb-20 sm:pt-80 sm:pb-40 lg:px-8">
+      <div class="mx-auto px-6 pt-36 pb-8 sm:pt-80 sm:pb-40 lg:px-8">
         <transition
             appear
             @before-enter="beforeEnter"
@@ -365,7 +365,7 @@ export default {
       </div>
     </div>
 
-    <div class="bg-white pt-12 pb-10 sm:py-24">
+    <div class="bg-white py-16 sm:py-32">
       <div class="mx-auto px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="lg:pr-4 mx-auto">
@@ -411,7 +411,7 @@ export default {
     </div>
 
     <div id="kindof"></div>
-    <div class="overflow-hidden bg-white py-10 sm:py-32">
+    <div class="overflow-hidden bg-white py-8 sm:py-32">
       <div class="mx-auto max-w-full px-6 lg:flex lg:px-8">
         <div class="mx-auto md:grid max-w-2xl gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none  lg:gap-y-8">
           <div class="lg:col-end-1 lg:w-full lg:max-w-5xl max-w-full lg:pb-8 ">
@@ -480,7 +480,7 @@ export default {
       </div>
     </div>
 
-    <div class="relative py-12 sm:py-32">
+    <div class="relative py-8 sm:py-32">
       <div class="mx-auto px-4 text-right sm:px-6 lg:px-8">
         <h2 id="atwork" class="mt-2 mb-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Everything you need<br> to build your website
@@ -504,7 +504,7 @@ export default {
       </div>
     </div>
 
-    <div class="bg-black py-12 sm:py-16 overflow-hidden">
+    <div class="bg-black py-10 sm:py-16 overflow-hidden">
       <div class="marquee-outer">
         <div class="marquee-wrapper mb-8">
           <div class="marquee-track">
@@ -525,7 +525,7 @@ export default {
 
       <div class="relative isolate">
         <div class="overflow-hidden">
-          <div class="px-6 pb-12 pt-12 sm:pt-60 lg:px-8 lg:pt-32 lg:pb-32">
+          <div class="px-6 py-16 sm:py-32 lg:px-8">
             <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div class="relative w-full max-w-7xl lg:shrink-0 xl:max-w-4xl">
                 <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">This is how we do it</h2>
@@ -613,7 +613,7 @@ export default {
 
 
 
-    <div id="philosophy" class="bg-black py-20 px-8 sm:px-16 lg:py-32 lg:px-24">
+    <div id="philosophy" class="bg-black py-16 px-8 sm:py-32 sm:px-16 lg:px-24">
       <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 lg:gap-24 items-start">
 
         <!-- Left: display headline -->
@@ -634,9 +634,9 @@ export default {
       </div>
     </div>
 
-    <div class="pt-20 pb-20">
+    <div class="py-16 sm:py-32">
       <div class="bg-white">
-        <div class=" py-1 px-4  lg:py-16 lg:px-8">
+        <div class="px-4 lg:px-8">
           <div class="space-y-8 sm:space-y-12">
             <div class="space-y-5 sm:space-y-4 text-right">
               <h2 id="projects" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Want to take a look at what I like to do?</h2>
@@ -704,7 +704,7 @@ export default {
       </div>
     </div>
 
-    <div class="relative isolate bg-black py-16 sm:py-28">
+    <div class="relative isolate bg-black py-16 sm:py-32">
       <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-32 px-8 sm:px-16 lg:px-24">
 
         <!-- Left: text -->
@@ -808,9 +808,25 @@ export default {
 .marquee-item {
   flex-shrink: 0;
   padding: 1.25rem 2.5rem;
+  position: relative;
+}
+
+.marquee-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.7) 0%, transparent 65%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.marquee-item:hover::before {
+  opacity: 1;
 }
 
 .marquee-logo {
+  position: relative;
   opacity: 0.45;
   filter: grayscale(100%) brightness(1.4);
   transition: opacity 0.35s ease, filter 0.35s ease;
@@ -818,7 +834,7 @@ export default {
 
 .marquee-item:hover .marquee-logo {
   opacity: 1;
-  filter: grayscale(0%) brightness(1) drop-shadow(0 0 10px rgba(236, 72, 153, 0.65));
+  filter: grayscale(0%) brightness(1);
 }
 
 @keyframes marquee {

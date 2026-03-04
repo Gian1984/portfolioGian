@@ -164,7 +164,7 @@ const slide = (el, done) => {
 
     <router-view/>
 
-        <footer class="relative bg-white pt-24 pb-6">
+        <footer class="relative bg-white pt-16 sm:pt-24 pb-6">
             <div class="px-4">
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-6/12 px-4">
