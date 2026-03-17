@@ -227,6 +227,35 @@ export default {
 
         },
 
+        faqs() {
+            return [
+                {
+                    question: 'What web development services do you offer?',
+                    answer: 'I offer end-to-end web development services: responsive brochure websites, e-commerce platforms, custom web applications, and WordPress development. I also handle hosting setup, email configuration, API integrations (Stripe, Google, and more), and ongoing maintenance.'
+                },
+                {
+                    question: 'What technologies do you specialize in?',
+                    answer: 'My core stack is Vue.js, Nuxt.js, PHP and Laravel for full-stack development, with Tailwind CSS and Bootstrap for styling. I also work with WordPress for content-managed sites and have solid experience with HTML5, CSS3, and JavaScript.'
+                },
+                {
+                    question: 'Do you work with clients outside Belgium?',
+                    answer: 'Yes. While I am based in Belgium and work with many clients in Brussels and across Belgium, I regularly collaborate with businesses in Italy and other European countries. All projects can be managed fully remotely.'
+                },
+                {
+                    question: 'How long does it take to build a website?',
+                    answer: 'It depends on the scope. A standard brochure website typically takes 3 to 6 weeks from kickoff to launch. A custom web application or e-commerce platform can take 2 to 4 months. I always provide a clear timeline estimate before starting.'
+                },
+                {
+                    question: 'Can you work on an existing WordPress website?',
+                    answer: 'Yes. I can take over, maintain, redesign or extend an existing WordPress site. Whether it\'s fixing bugs, improving performance, adding new features or migrating to a new theme, I am happy to help.'
+                },
+                {
+                    question: 'How do I get started?',
+                    answer: 'Simply fill in the contact form below or send me an email at gl.tiengo@gmail.com. I\'ll get back to you within 24 hours to schedule a call and understand your project needs.'
+                },
+            ]
+        },
+
         staeps(){
             return  [
                 {
@@ -278,6 +307,7 @@ export default {
             turnstileToken: '',
             turnstileWidgetId: null,
             activeProject: null,
+            activeFaq: null,
         }
     },
 
@@ -298,6 +328,10 @@ export default {
     methods: {
         toggleProject(index) {
             this.activeProject = this.activeProject === index ? null : index;
+        },
+
+        toggleFaq(index) {
+            this.activeFaq = this.activeFaq === index ? null : index;
         },
 
         renderTurnstile() {
@@ -700,6 +734,35 @@ export default {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-white py-16 sm:py-32">
+      <div class="px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-4">Frequently asked questions</h2>
+          <p class="text-base leading-7 text-gray-600 mb-12">Everything you need to know before we start working together.</p>
+          <dl class="divide-y divide-gray-200">
+            <div
+              v-for="(faq, index) in faqs"
+              :key="index"
+              class="py-6 cursor-pointer"
+              @click="toggleFaq(index)"
+            >
+              <dt class="flex items-center justify-between gap-4">
+                <h3 class="text-base font-semibold leading-7 text-gray-900">{{ faq.question }}</h3>
+                <span class="text-pink-500 font-mono text-lg select-none flex-shrink-0">{{ activeFaq === index ? '−' : '+' }}</span>
+              </dt>
+              <dd
+                class="overflow-hidden transition-all duration-300 ease-in-out"
+                :style="{ maxHeight: activeFaq === index ? '200px' : '0px' }"
+              >
+                <p class="mt-4 text-base leading-7 text-gray-600">{{ faq.answer }}</p>
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
