@@ -10,20 +10,25 @@
     <meta name="theme-color" content="#ec4899" />
 
     <!-- Primary Meta Tags -->
-    <title>Gianluca Tiengo - Web Developer</title>
-    <meta name="title" content="Gianluca Tiengo - Web Developer" />
-    <meta name="description" content="Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies. I create fast, responsive and accessible websites for small and medium businesses." />
+    <title>Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js &amp; Laravel</title>
+    <meta name="title" content="Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js &amp; Laravel" />
+    <meta name="description" content="Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results." />
+    <meta name="keywords" content="freelance web developer Belgium, Vue.js developer, Laravel developer, PHP developer, full-stack developer, website development Brussels, WordPress developer, web application developer" />
     <meta name="author" content="Gianluca Tiengo" />
     <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="BE" />
+    <meta name="geo.placename" content="Belgium" />
     <link rel="canonical" href="https://gianlucatiengo.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gianlucatiengo.com/" />
-    <meta property="og:title" content="Gianluca Tiengo - Web Developer" />
-    <meta property="og:description" content="Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies. I create fast, responsive and accessible websites for small and medium businesses." />
-    <meta property="og:image" content="https://gianlucatiengo.com/img_new.png" />
-    <meta property="og:image:alt" content="Gianluca Tiengo - Web Developer" />
+    <meta property="og:title" content="Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js &amp; Laravel" />
+    <meta property="og:description" content="Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results." />
+    <meta property="og:image" content="https://gianlucatiengo.com/img/OG.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gianluca Tiengo — Freelance Full-Stack Web Developer" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Gianluca Tiengo" />
 
@@ -31,9 +36,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@truefreedom84" />
     <meta name="twitter:creator" content="@truefreedom84" />
-    <meta name="twitter:title" content="Gianluca Tiengo - Web Developer" />
-    <meta name="twitter:description" content="Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies." />
-    <meta name="twitter:image" content="https://gianlucatiengo.com/img_new.png" />
+    <meta name="twitter:title" content="Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js &amp; Laravel" />
+    <meta name="twitter:description" content="Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results." />
+    <meta name="twitter:image" content="https://gianlucatiengo.com/img/OG.png" />
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -44,10 +49,22 @@
           "@type": "Person",
           "@id": "https://gianlucatiengo.com/#person",
           "name": "Gianluca Tiengo",
-          "jobTitle": "Web Developer",
+          "givenName": "Gianluca",
+          "familyName": "Tiengo",
+          "jobTitle": "Freelance Full-Stack Web Developer",
+          "description": "Freelance full-stack web developer based in Belgium, specializing in Vue.js, Laravel, PHP and modern web technologies. Working with businesses across Belgium, Italy and Europe.",
           "url": "https://gianlucatiengo.com/",
           "email": "gl.tiengo@gmail.com",
-          "knowsAbout": ["JavaScript", "Vue.js", "PHP", "Laravel", "WordPress", "Tailwind CSS", "HTML", "CSS", "Full-Stack Web Development"],
+          "image": "https://gianlucatiengo.com/img/OG.png",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BE"
+          },
+          "knowsAbout": [
+            "JavaScript", "Vue.js", "Nuxt.js", "PHP", "Laravel", "WordPress",
+            "Tailwind CSS", "Bootstrap", "HTML5", "CSS3",
+            "Full-Stack Web Development", "E-commerce", "Web Applications", "REST APIs"
+          ],
           "sameAs": [
             "https://www.linkedin.com/in/gianluca-tiengo/",
             "https://github.com/Gian1984",
@@ -56,14 +73,47 @@
           ]
         },
         {
+          "@type": "ProfessionalService",
+          "@id": "https://gianlucatiengo.com/#service",
+          "name": "Gianluca Tiengo — Freelance Web Development",
+          "description": "Freelance full-stack web development: responsive websites, e-commerce, custom web applications and WordPress — built with Vue.js, Laravel and PHP.",
+          "url": "https://gianlucatiengo.com/",
+          "provider": { "@id": "https://gianlucatiengo.com/#person" },
+          "areaServed": ["Belgium", "Italy", "Europe"],
+          "serviceType": [
+            "Web Development",
+            "E-commerce Development",
+            "Web Application Development",
+            "WordPress Development",
+            "API Integration"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BE"
+          }
+        },
+        {
           "@type": "WebSite",
           "@id": "https://gianlucatiengo.com/#website",
           "url": "https://gianlucatiengo.com/",
-          "name": "Gianluca Tiengo - Web Developer",
-          "description": "Portfolio of Gianluca Tiengo, full-stack web developer specializing in Vue.js, Laravel and modern web technologies.",
-          "author": {
-            "@id": "https://gianlucatiengo.com/#person"
-          }
+          "name": "Gianluca Tiengo — Freelance Full-Stack Web Developer",
+          "description": "Portfolio of Gianluca Tiengo, freelance full-stack web developer specializing in Vue.js, Laravel and modern web technologies. Based in Belgium.",
+          "author": { "@id": "https://gianlucatiengo.com/#person" }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://gianlucatiengo.com/#projects",
+          "name": "Selected Projects by Gianluca Tiengo",
+          "description": "A selection of websites and web applications developed by Gianluca Tiengo.",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "CodeHelper.me", "url": "https://codehelper.me/" },
+            { "@type": "ListItem", "position": 2, "name": "Undiscover.me", "url": "https://www.undiscover.me/" },
+            { "@type": "ListItem", "position": 3, "name": "The National Venue Brussels", "url": "https://www.thenationalvenuebrussels.com/" },
+            { "@type": "ListItem", "position": 4, "name": "Artfood", "url": "https://www.artfood.be/" },
+            { "@type": "ListItem", "position": 5, "name": "La Villa In The Sky Brussels", "url": "https://www.lavillainthesky.be/" },
+            { "@type": "ListItem", "position": 6, "name": "Mancala Travel", "url": "https://www.mancalatravel.com/" },
+            { "@type": "ListItem", "position": 7, "name": "DistriCare Pharma", "url": "https://www.districare.be/" }
+          ]
         }
       ]
     }
@@ -84,6 +134,44 @@
   </head>
   <body>
     <div id="app"></div>
+    <noscript>
+      <main>
+        <h1>Gianluca Tiengo — Freelance Full-Stack Web Developer</h1>
+        <p>Freelance full-stack web developer based in Belgium. I build fast, responsive websites and web applications with Vue.js, Laravel and PHP for small businesses, startups and agencies across Belgium and Europe.</p>
+        <h2>Skills &amp; Technologies</h2>
+        <ul>
+          <li>JavaScript &amp; Vue.js &amp; Nuxt.js</li>
+          <li>PHP &amp; Laravel</li>
+          <li>HTML5 &amp; CSS3</li>
+          <li>Tailwind CSS &amp; Bootstrap</li>
+          <li>WordPress</li>
+          <li>REST APIs &amp; Third-party integrations</li>
+          <li>Hosting, deployment, GitHub, Netlify</li>
+        </ul>
+        <h2>Services</h2>
+        <ul>
+          <li>Responsive brochure websites</li>
+          <li>E-commerce development</li>
+          <li>Custom web applications</li>
+          <li>WordPress development</li>
+          <li>API integration (Stripe, Google, etc.)</li>
+        </ul>
+        <h2>Selected Projects</h2>
+        <ul>
+          <li>CodeHelper.me — 100+ developer tools and 800+ curated resources</li>
+          <li>Undiscover.me — Personal website platform</li>
+          <li>Unlistened.me — Podcast discovery platform</li>
+          <li>The National Venue Brussels — Exclusive event venue website</li>
+          <li>Artfood — Refined catering company</li>
+          <li>La Villa In The Sky — Fine dining in Brussels</li>
+          <li>Mancala Travel — Travel agency for Southern Africa</li>
+          <li>DistriCare Pharma — Belgian pharmaceutical group</li>
+          <li>Brusano — Brussels palliative care platform</li>
+          <li>Claudio Fava — Architect portfolio website</li>
+        </ul>
+        <p>Based in Belgium · Working across Belgium, Italy and Europe · Contact: gl.tiengo@gmail.com</p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

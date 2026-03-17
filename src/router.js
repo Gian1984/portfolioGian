@@ -10,15 +10,15 @@ const router = createRouter({
             name: 'home',
             component: Home,
             meta: {
-                title: "Gianluca Tiengo - Web Developer",
+                title: "Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel",
                 metaTags: [
                     {
                         name: 'description',
-                        content: "Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies. I create fast, responsive and accessible websites for small and medium businesses."
+                        content: "Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results."
                     },
                     {
                         property: 'og:title',
-                        content: "Gianluca Tiengo - Web Developer"
+                        content: "Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel"
                     },
                     {
                         property: 'og:url',
@@ -30,11 +30,11 @@ const router = createRouter({
                     },
                     {
                         property: 'og:description',
-                        content: "Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies. I create fast, responsive and accessible websites for small and medium businesses."
+                        content: "Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results."
                     },
                     {
                         property: 'og:image',
-                        content: "https://gianlucatiengo.com/img_new.png"
+                        content: "https://gianlucatiengo.com/img/OG.png"
                     },
                     {
                         name: 'twitter:card',
@@ -42,15 +42,15 @@ const router = createRouter({
                     },
                     {
                         name: 'twitter:title',
-                        content: "Gianluca Tiengo - Web Developer"
+                        content: "Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel"
                     },
                     {
                         name: 'twitter:description',
-                        content: "Full-stack web developer specializing in Vue.js, Laravel, PHP and modern web technologies."
+                        content: "Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results."
                     },
                     {
                         name: 'twitter:image',
-                        content: "https://gianlucatiengo.com/img_new.png"
+                        content: "https://gianlucatiengo.com/img/OG.png"
                     }
                 ]
             }

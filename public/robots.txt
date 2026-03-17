@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Block access to source files
+Disallow: /src/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Crawl-delay for bots that respect it
+Crawl-delay: 10
+
+# Sitemaps
 Sitemap: https://gianlucatiengo.com/sitemap.xml
