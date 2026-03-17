@@ -738,35 +738,6 @@ export default {
       </div>
     </div>
 
-    <!-- FAQ Section -->
-    <div class="bg-white py-16 sm:py-32">
-      <div class="px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl">
-          <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-4">Frequently asked questions</h2>
-          <p class="text-base leading-7 text-gray-600 mb-12">Everything you need to know before we start working together.</p>
-          <dl class="divide-y divide-gray-200">
-            <div
-              v-for="(faq, index) in faqs"
-              :key="index"
-              class="py-6 cursor-pointer"
-              @click="toggleFaq(index)"
-            >
-              <dt class="flex items-center justify-between gap-4">
-                <h3 class="text-base font-semibold leading-7 text-gray-900">{{ faq.question }}</h3>
-                <span class="text-pink-500 font-mono text-lg select-none flex-shrink-0">{{ activeFaq === index ? '−' : '+' }}</span>
-              </dt>
-              <dd
-                class="overflow-hidden transition-all duration-300 ease-in-out"
-                :style="{ maxHeight: activeFaq === index ? '200px' : '0px' }"
-              >
-                <p class="mt-4 text-base leading-7 text-gray-600">{{ faq.answer }}</p>
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </div>
-
     <div class="relative isolate bg-black py-16 sm:py-32">
       <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-32 px-8 sm:px-16 lg:px-24">
 
