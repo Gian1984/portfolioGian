@@ -12,6 +12,8 @@ import { AcademicCapIcon,
 } from '@heroicons/vue/24/solid'
 import gsap from "gsap";
 
+useSeoRegistry().apply('home')
+
 const beforeEnter = (el) => {
   el.style.opacity = 0
   el.style.transform = 'translateX(-400px)'
@@ -312,9 +314,11 @@ export default {
     },
 
     created() {
-        window.onloadTurnstileCallback = () => {
-            this.renderTurnstile();
-        };
+        if (import.meta.client) {
+            window.onloadTurnstileCallback = () => {
+                this.renderTurnstile();
+            };
+        }
     },
 
     mounted() {
@@ -474,7 +478,7 @@ export default {
                   data-fancybox="gallery"
                   data-caption="https://www.favaclaudio.com/"
               >
-                <img src="../assets/favascreen.webp" alt="Screenshot of the Claudio Fava architect website" class="aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
+                <img src="~/assets/favascreen.webp" alt="Screenshot of the Claudio Fava architect website" class="aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
               </a>
             </div>
             <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
@@ -485,7 +489,7 @@ export default {
                     aria-label="visit https://www.districare.be/"
                     data-caption="https://www.districare.be/"
                 >
-                  <img src="../assets/bioscreen.webp" alt="Screenshot of the Bioholistic health platform website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
+                  <img src="~/assets/bioscreen.webp" alt="Screenshot of the Bioholistic health platform website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
               <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
@@ -495,7 +499,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://magritte.com/"
                 >
-                  <img src="../assets/magrittescreen.webp" alt="Screenshot of the René Magritte surrealist art website" class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
+                  <img src="~/assets/magrittescreen.webp" alt="Screenshot of the René Magritte surrealist art website" class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
@@ -505,7 +509,7 @@ export default {
                     data-fancybox="gallery"
                     data-caption="https://www.colonelgustave.com/"
                 >
-                <img src="../assets/colonelscreen.webp" alt="Screenshot of the Colonel Gustave pet food website" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
+                <img src="~/assets/colonelscreen.webp" alt="Screenshot of the Colonel Gustave pet food website" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -585,7 +589,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.anamkitchen.be/"
                     >
-                      <img src="../assets/anamscreen.webp" alt="Screenshot of the Anam Kitchen restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/anamscreen.webp" alt="Screenshot of the Anam Kitchen restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -598,7 +602,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.bassin-nord.brussels/agenda/"
                     >
-                      <img src="../assets/bassin.webp" alt="Screenshot of the Bassin Nord Brussels website" class="w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/bassin.webp" alt="Screenshot of the Bassin Nord Brussels website" class="w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -609,7 +613,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://undiscover.me/"
                     >
-                      <img src="../assets/undiscoverscreen.webp" alt="Screenshot of the Undiscover.me personal website platform" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/undiscoverscreen.webp" alt="Screenshot of the Undiscover.me personal website platform" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -622,7 +626,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.colonelgustave.com/"
                     >
-                      <img src="../assets/colonelmobilescreen.webp" alt="Screenshot of the Colonel Gustave website on mobile" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/colonelmobilescreen.webp" alt="Screenshot of the Colonel Gustave website on mobile" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -633,7 +637,7 @@ export default {
                         data-fancybox="gallery2"
                         data-caption="https://www.pizzavino.be/"
                     >
-                      <img src="../assets/pizzascreen.webp" alt="Screenshot of the Pizza Vino restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/pizzascreen.webp" alt="Screenshot of the Pizza Vino restaurant website" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -876,4 +880,3 @@ export default {
   to   { transform: translateX(-25%); }
 }
 </style>
-
