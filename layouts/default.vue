@@ -105,7 +105,7 @@ const slide = (el, done) => {
               @before-enter="beforeSlide"
               @enter="slide"
           >
-          <img class="h-20 lg:h-32 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
+          <img class="h-20 lg:h-32 w-auto" src="~/assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </transition>
         </a>
       </div>
@@ -133,7 +133,7 @@ const slide = (el, done) => {
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-20 w-auto" src="./assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
+            <img class="h-20 w-auto" src="~/assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
           </a>
           <button type="button" id="close" class="p-2.5" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
@@ -161,7 +161,7 @@ const slide = (el, done) => {
 
 
 
-    <router-view/>
+    <slot />
 
         <footer class="relative bg-white pt-16 sm:pt-24 pb-6">
             <div class="px-4">
@@ -230,4 +230,3 @@ export default {
 
 }
 </script>
-

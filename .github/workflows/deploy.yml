@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Generate static site
+        run: npm run generate
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -34,7 +34,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./.output/public/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           exclude: |
             **/.git*
