@@ -1,6 +1,5 @@
 <script setup>
 import {defineComponent, h} from "vue";
-import gsap from 'gsap'
 
 import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
@@ -72,43 +71,12 @@ const footerNavigation = {
 }
 
 
-const beforeSlide = (el) => {
-    el.style.opacity = 0
-    el.style.transform = 'translateY(400px)'
-}
-
-const slide = (el, done) => {
-    gsap.from(el, {
-        rotation: 180
-    })
-    gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        onComplete: done,
-        delay: el.dataset.index * 0.1,
-        rotation: 360,
-    })
-}
-
-
 </script>
 
 <template>
-  <header class="absolute inset-x-0 top-0 z-50">
+  <header class="fixed inset-x-0 top-0 z-50 bg-white">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Gianluca Tiengo Web Developer</span>
-          <transition
-              appear
-              @before-enter="beforeSlide"
-              @enter="slide"
-          >
-          <img class="h-20 lg:h-32 w-auto" src="~/assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
-          </transition>
-        </a>
-      </div>
+      <div class="flex lg:flex-1"></div>
       <div class="flex lg:hidden">
         <button type="button" class="inline-flex flex-col items-end justify-center gap-1.5 p-2.5" @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
@@ -129,31 +97,21 @@ const slide = (el, done) => {
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-50" />
-      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-20 w-auto" src="~/assets/logoGianlucaTrasparebte.webp" alt="Gianluca Tiengo Web Developer Logo" />
-          </a>
-          <button type="button" id="close" class="p-2.5" @click="mobileMenuOpen = false">
-            <span class="sr-only">Close menu</span>
-            <span class="relative flex items-center justify-center w-5 h-5" aria-hidden="true">
-              <span class="absolute block h-0.5 w-5 bg-black rotate-45"></span>
-              <span class="absolute block h-0.5 w-5 bg-pink-500 -rotate-45"></span>
-            </span>
-          </button>
-        </div>
-        <div class="mt-10 flow-root">
-          <div class="divide-y divide-gray-100">
-            <div class="space-y-1 py-6">
-              <button @click="drawer()" v-on:click="scrolltoskills()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Skills</button>
-              <button @click="drawer()" v-on:click="scrolltokindof()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Kind of</button>
-              <button @click="drawer()" v-on:click="scrolltoatwork()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">At work</button>
-              <button @click="drawer()" v-on:click="scrolltophilosophy()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Philosophy</button>
-              <button @click="drawer()" v-on:click="scrolltoprojects()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Projects</button>
-              <button @click="drawer()" v-on:click="scrolltocontact()" class="mt-4 block w-full text-center font-mono text-sm uppercase tracking-widest text-black border border-black px-4 py-2.5 hover:border-pink-500 hover:text-pink-500 transition-colors duration-200">Contact</button>
-            </div>
-          </div>
+      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex items-center justify-center">
+        <button type="button" id="close" class="absolute top-6 right-6 p-2.5" @click="mobileMenuOpen = false">
+          <span class="sr-only">Close menu</span>
+          <span class="relative flex items-center justify-center w-5 h-5" aria-hidden="true">
+            <span class="absolute block h-0.5 w-5 bg-black rotate-45"></span>
+            <span class="absolute block h-0.5 w-5 bg-pink-500 -rotate-45"></span>
+          </span>
+        </button>
+        <div class="w-full max-w-xs flex flex-col items-center space-y-1">
+          <button @click="drawer()" v-on:click="scrolltoskills()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Skills</button>
+          <button @click="drawer()" v-on:click="scrolltokindof()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Kind of</button>
+          <button @click="drawer()" v-on:click="scrolltoatwork()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">At work</button>
+          <button @click="drawer()" v-on:click="scrolltophilosophy()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Philosophy</button>
+          <button @click="drawer()" v-on:click="scrolltoprojects()" class="block w-full text-center font-mono text-sm uppercase tracking-widest text-black py-3 hover:text-pink-500 transition-colors duration-200">Projects</button>
+          <button @click="drawer()" v-on:click="scrolltocontact()" class="mt-4 block w-full text-center font-mono text-sm uppercase tracking-widest text-black border border-black px-4 py-2.5 hover:border-pink-500 hover:text-pink-500 transition-colors duration-200">Contact</button>
         </div>
       </DialogPanel>
     </Dialog>

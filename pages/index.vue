@@ -10,30 +10,7 @@ import { AcademicCapIcon,
     CheckCircleIcon,
     XCircleIcon,
 } from '@heroicons/vue/24/solid'
-import gsap from "gsap";
-
 useSeoRegistry().apply('home')
-
-const beforeEnter = (el) => {
-  el.style.opacity = 0
-  el.style.transform = 'translateX(-400px)'
-}
-
-const beforeRight = (el) => {
-  el.style.opacity = 0
-  el.style.transform = 'translateX(400px)'
-}
-
-const enter = (el, done) => {
-  gsap.to(el, {
-    opacity: 1,
-    x: 0,
-    duration: 1.5,
-    onComplete: done,
-    delay: el.dataset.index * 0.5,
-  })
-}
-
 </script>
 
 <script>
@@ -99,16 +76,16 @@ export default {
                   href:'https://codehelper.me/',
                 },
                 {
-                  name: 'Undiscover.me',
-                  role: 'Make sure your new website shows the best of you',
-                  imageUrl:'./img/logos/undiscoverme.webp',
-                  href:'https://www.undiscover.me/',
-                },
-                {
                   name: 'Unlistened.me',
-                  role: 'Latest podcasts experience',
+                  role: 'Latest podcasts & music experience',
                   imageUrl:'./img/logos/unlistened_transparen_logo_176.webp',
                   href:'https://www.unlistened.me/',
+                },
+                {
+                  name: 'Panoptès',
+                  role: 'Art collection',
+                  imageUrl:'./img/logos/panoptes.webp',
+                  href:'https://www.panoptes.art/',
                 },
                 {
                     name: 'Claudio Fava',
@@ -147,12 +124,6 @@ export default {
                     href:'https://pizzavino.be/',
                 },
                 {
-                    name: 'Panoptès',
-                    role: 'Art collection',
-                    imageUrl:'./img/logos/panoptes.webp',
-                    href:'https://www.panoptes.art/',
-                },
-                {
                     name: 'La Villa In The Sky',
                     role: 'High-flying fine dining experience in Brussels',
                     imageUrl:'./img/logos/lavilla.webp',
@@ -187,6 +158,12 @@ export default {
                   role: 'Artisan bread and pizza maker',
                   imageUrl:'./img/logos/logoartigiano.webp',
                   href:'https://www.artigianodellafarina.be/',
+                },
+                {
+                  name: 'Undiscover.me',
+                  role: 'Make sure your new website shows the best of you',
+                  imageUrl:'./img/logos/undiscoverme.webp',
+                  href:'https://www.undiscover.me/',
                 },
                 // More people...
             ]
@@ -382,24 +359,11 @@ export default {
 </script>
 <template>
 
-    <div class="bg-white">
-      <div class="mx-auto px-6 pt-36 pb-8 sm:pt-64 sm:pb-32 lg:px-8">
-        <transition
-            appear
-            @before-enter="beforeEnter"
-            @enter="enter"
-        >
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">Gianluca Tiengo<br/>Web Developer</h1>
-        </transition>
-        <transition
-            appear
-            @before-enter="beforeRight"
-            @enter="enter"
-        >
-          <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl mt-5">
-            I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you are a business seeking a web presence<br/> or an employer looking to hire,<br/> you can get in touch with me<br/> <a href="#contact" @click.prevent="scrolltocontact()" aria-label="Go to contact form" class="text-pink-500 cursor-pointer">here</a>.
-          </h2>
-        </transition>
+    <div class="bg-white min-h-screen flex items-center justify-center">
+      <div class="mx-auto px-6 lg:px-8">
+        <h1 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+          I enjoy building everything from small business<br/> to rich interactive apps.<br/> If you're a business looking to establish an online<br/> presence, or an employer seeking a developer,<br/> feel free to get in touch with me<br/> <a href="#contact" @click.prevent="scrolltocontact()" aria-label="Go to contact form" class="text-pink-500 cursor-pointer">here</a>.
+        </h1>
       </div>
     </div>
 
