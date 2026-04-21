@@ -1,3 +1,5 @@
+const siteUrl = 'https://gianlucatiengo.com'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
@@ -5,8 +7,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    public: {
+      siteUrl,
+    },
+  },
+
   site: {
-    url: 'https://gianlucatiengo.com',
+    url: siteUrl,
     name: 'Gianluca Tiengo — Freelance Full-Stack Web Developer',
   },
 
@@ -42,15 +50,15 @@ export default defineNuxtConfig({
             '@graph': [
               {
                 '@type': 'Person',
-                '@id': 'https://gianlucatiengo.com/#person',
+                '@id': `${siteUrl}/#person`,
                 name: 'Gianluca Tiengo',
                 givenName: 'Gianluca',
                 familyName: 'Tiengo',
                 jobTitle: 'Freelance Full-Stack Web Developer',
                 description: 'Freelance full-stack web developer based in Belgium, specializing in Vue.js, Laravel, PHP and modern web technologies. Working with businesses across Belgium, Italy and Europe.',
-                url: 'https://gianlucatiengo.com/',
+                url: `${siteUrl}/`,
                 email: 'gl.tiengo@gmail.com',
-                image: 'https://gianlucatiengo.com/og.php',
+                image: `${siteUrl}/og.php`,
                 address: { '@type': 'PostalAddress', addressCountry: 'BE' },
                 knowsAbout: [
                   'JavaScript', 'Vue.js', 'Nuxt.js', 'PHP', 'Laravel', 'WordPress',
@@ -66,11 +74,11 @@ export default defineNuxtConfig({
               },
               {
                 '@type': 'ProfessionalService',
-                '@id': 'https://gianlucatiengo.com/#service',
+                '@id': `${siteUrl}/#service`,
                 name: 'Gianluca Tiengo — Freelance Web Development',
                 description: 'Freelance full-stack web development: responsive websites, e-commerce, custom web applications and WordPress — built with Vue.js, Laravel and PHP.',
-                url: 'https://gianlucatiengo.com/',
-                provider: { '@id': 'https://gianlucatiengo.com/#person' },
+                url: `${siteUrl}/`,
+                provider: { '@id': `${siteUrl}/#person` },
                 areaServed: ['Belgium', 'Italy', 'Europe'],
                 serviceType: [
                   'Web Development',
@@ -83,15 +91,15 @@ export default defineNuxtConfig({
               },
               {
                 '@type': 'WebSite',
-                '@id': 'https://gianlucatiengo.com/#website',
-                url: 'https://gianlucatiengo.com/',
+                '@id': `${siteUrl}/#website`,
+                url: `${siteUrl}/`,
                 name: 'Gianluca Tiengo — Freelance Full-Stack Web Developer',
                 description: 'Portfolio of Gianluca Tiengo, freelance full-stack web developer specializing in Vue.js, Laravel and modern web technologies. Based in Belgium.',
-                author: { '@id': 'https://gianlucatiengo.com/#person' },
+                author: { '@id': `${siteUrl}/#person` },
               },
               {
                 '@type': 'FAQPage',
-                '@id': 'https://gianlucatiengo.com/#faq',
+                '@id': `${siteUrl}/#faq`,
                 mainEntity: [
                   {
                     '@type': 'Question',
@@ -145,7 +153,7 @@ export default defineNuxtConfig({
               },
               {
                 '@type': 'ItemList',
-                '@id': 'https://gianlucatiengo.com/#projects',
+                '@id': `${siteUrl}/#projects`,
                 name: 'Selected Projects by Gianluca Tiengo',
                 description: 'A selection of websites and web applications developed by Gianluca Tiengo.',
                 itemListElement: [

@@ -13,36 +13,48 @@ export interface SeoEntry {
   twitterImage?: string
 }
 
-const SITE = {
+const DEFAULT_SITE = {
   url: 'https://gianlucatiengo.com',
   name: 'Gianluca Tiengo',
   locale: 'en_US',
   twitterHandle: '@truefreedom84',
 } as const
 
-const defaultOgImage = `${SITE.url}/og.php`
+const getSite = () => {
+  const runtimeConfig = useRuntimeConfig()
+  const siteUrl = runtimeConfig.public.siteUrl || DEFAULT_SITE.url
 
-const registry = {
-  home: {
-    title: 'Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel',
-    description: 'Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results.',
-    canonical: `${SITE.url}/`,
-    keywords: 'freelance web developer Belgium, Vue.js developer, Laravel developer, PHP developer, full-stack developer, website development Brussels, WordPress developer, web application developer',
-    ogImage: defaultOgImage,
-    ogImageAlt: 'Gianluca Tiengo — Freelance Full-Stack Web Developer',
-    ogType: 'website',
-    twitterImage: defaultOgImage,
-  },
-} satisfies Record<string, SeoEntry>
+  return {
+    ...DEFAULT_SITE,
+    url: siteUrl,
+  }
+}
 
-export type SeoKey = keyof typeof registry
+const getRegistry = (site = getSite()) =>
+  ({
+    home: {
+      title: 'Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel',
+      description: 'Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results.',
+      canonical: `${site.url}/`,
+      keywords: 'freelance web developer Belgium, Vue.js developer, Laravel developer, PHP developer, full-stack developer, website development Brussels, WordPress developer, web application developer',
+      ogImage: `${site.url}/og.php`,
+      ogImageAlt: 'Gianluca Tiengo — Freelance Full-Stack Web Developer',
+      ogType: 'website',
+      twitterImage: `${site.url}/og.php`,
+    },
+  }) satisfies Record<string, SeoEntry>
+
+export type SeoKey = keyof ReturnType<typeof getRegistry>
 
 export const useSeoRegistry = () => ({
   get(key: SeoKey): SeoEntry {
+    const registry = getRegistry()
     return registry[key]
   },
 
   apply(key: SeoKey) {
+    const SITE = getSite()
+    const registry = getRegistry(SITE)
     const e = registry[key]
 
     useSeoMeta({
@@ -81,4 +93,4 @@ export const useSeoRegistry = () => ({
   },
 })
 
-export const seoSite = SITE
+export const seoSite = DEFAULT_SITE
