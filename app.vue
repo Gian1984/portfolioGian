@@ -30,6 +30,7 @@
           <li>CodeHelper.me — 100+ developer tools and 800+ curated resources</li>
           <li>Undiscover.me — Personal website platform</li>
           <li>Unlistened.me — Podcast discovery platform</li>
+          <li>Barnes Brussels — Luxury real estate agency in Brussels &amp; Brabant</li>
           <li>The National Venue Brussels — Exclusive event venue website</li>
           <li>Artfood — Refined catering company</li>
           <li>La Villa In The Sky — Fine dining in Brussels</li>

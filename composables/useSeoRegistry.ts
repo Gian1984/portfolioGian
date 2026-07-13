@@ -33,7 +33,7 @@ const getSite = () => {
 const getRegistry = (site = getSite()) =>
   ({
     home: {
-      title: 'Gianluca Tiengo — Freelance Full-Stack Web Developer | Vue.js & Laravel',
+      title: 'Gianluca Tiengo — Freelance Web Developer | Vue.js & Laravel',
       description: 'Freelance full-stack web developer in Belgium. I build fast, responsive websites and web apps with Vue.js, Laravel and PHP for businesses that want results.',
       canonical: `${site.url}/`,
       keywords: 'freelance web developer Belgium, Vue.js developer, Laravel developer, PHP developer, full-stack developer, website development Brussels, WordPress developer, web application developer',

@@ -82,6 +82,12 @@ export default {
                   href:'https://www.unlistened.me/',
                 },
                 {
+                  name: 'Barnes Brussels',
+                  role: 'Luxury real estate agency in Brussels & Brabant',
+                  imageUrl:'./img/logos/barnes_logo.svg',
+                  href:'https://www.barnes-brussels.com/',
+                },
+                {
                   name: 'Panoptès',
                   role: 'Art collection',
                   imageUrl:'./img/logos/panoptes.webp',

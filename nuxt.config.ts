@@ -18,6 +18,12 @@ export default defineNuxtConfig({
     name: 'Gianluca Tiengo — Freelance Full-Stack Web Developer',
   },
 
+  nitro: {
+    prerender: {
+      routes: ['/404.html'],
+    },
+  },
+
   sitemap: {
     autoLastmod: true,
     urls: [
@@ -34,13 +40,10 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#ec4899' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/img_new.png' },
-        { rel: 'apple-touch-icon', href: '/img_new.png' },
-        { rel: 'preconnect', href: 'https://cdn.jsdelivr.net', crossorigin: '' },
-        { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'preconnect', href: 'https://challenges.cloudflare.com', crossorigin: '' },
         { rel: 'dns-prefetch', href: 'https://challenges.cloudflare.com' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css' },
       ],
       script: [
         {
@@ -164,12 +167,12 @@ export default defineNuxtConfig({
                   { '@type': 'ListItem', position: 5, name: 'La Villa In The Sky Brussels', url: 'https://www.lavillainthesky.be/' },
                   { '@type': 'ListItem', position: 6, name: 'Mancala Travel', url: 'https://www.mancalatravel.com/' },
                   { '@type': 'ListItem', position: 7, name: 'DistriCare Pharma', url: 'https://www.districare.be/' },
+                  { '@type': 'ListItem', position: 8, name: 'Barnes Brussels', url: 'https://www.barnes-brussels.com/' },
                 ],
               },
             ],
           }),
         },
-        { src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js', defer: true },
         { src: 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit', async: true },
       ],
     },
