@@ -399,11 +399,11 @@ export default {
                 <p class="mt-6 text-3xl font-semibold tracking-tight text-black">I create fast, responsive, and accessible websites built with best practices. My main area of expertise is full-stack development (HTML, CSS, JS, PHP), covering small and medium-sized web applications. I also have solid experience with popular open-source CMS such as WordPress.</p>
                 <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div class="border-l-2 border-pink-500 pl-5">
-                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Knowledge sharing</span>
+                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">Knowledge sharing</span>
                     <p class="text-base leading-7 text-black">As a developer, I strongly believe in sharing knowledge. The web development community has given me so much through free resources, tutorials, and open-source tools, and giving back felt natural.</p>
                   </div>
                   <div class="border-l-2 border-pink-500 pl-5">
-                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">CodeHelper.me</span>
+                    <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">CodeHelper.me</span>
                     <p class="text-base leading-7 text-black">I built CodeHelper.me as a side project: a collection of tools and articles I created myself, alongside curated external resources I use daily. Everything is free. If you are a self-taught developer or just curious, take a look.</p>
                   </div>
                 </div>
@@ -431,11 +431,11 @@ export default {
             </p>
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="border-l-2 border-pink-500 pl-5">
-                <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">E-commerce</span>
+                <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">E-commerce</span>
                 <p class="text-base leading-7 text-black">In addition to designing a beautiful, modern-looking website that fits your brand, I will also take care of all technical aspects of the e-commerce side to ensure that everything works seamlessly. I can set up secure payment gateways, third-party integrations and subscriptions.</p>
               </div>
               <div class="border-l-2 border-pink-500 pl-5">
-                <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Web Applications</span>
+                <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">Web Applications</span>
                 <p class="text-base leading-7 text-black">I deliver web-based applications that help businesses to keep pace with constantly changing needs. Such applications offer quick and easy access from any device, anywhere, ensure lower hardware and software costs, allow faster time to market, and provide flexible integration with other systems.</p>
               </div>
             </div>
@@ -503,7 +503,7 @@ export default {
               :key="feature.name"
               class="p-6 bg-white  border-r-2 border-r-pink-500"
             >
-              <span class="block text-xs font-mono text-pink-500 mb-6">{{ String(index + 1).padStart(2, '0') }}.</span>
+              <span class="block text-xs font-mono text-pink-600 mb-6">{{ String(index + 1).padStart(2, '0') }}.</span>
               <h3 class="text-xl font-bold tracking-tight text-gray-900 mb-3">{{ feature.name }}</h3>
               <p class="text-base leading-7 text-black">{{ feature.description }}</p>
             </div>
@@ -541,8 +541,8 @@ export default {
                 <div class="mt-12 divide-y divide-gray-200">
                   <div v-for="step in staeps" :key="step.id" class="py-8">
                     <div class="flex items-center gap-4 mb-4">
-                      <span class="text-sm font-mono text-pink-500 min-w-[2rem]">{{ String(step.id).padStart(2, '0') }}.</span>
-                      <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">{{ step.category.name }}</span>
+                      <span class="text-sm font-mono text-pink-600 min-w-[2rem]">{{ String(step.id).padStart(2, '0') }}.</span>
+                      <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">{{ step.category.name }}</span>
                       <span class="text-xs text-gray-300 mx-1">·</span>
                       <h3 class="text-xl font-bold uppercase tracking-tight text-gray-900">{{ step.title }}</h3>
                     </div>
@@ -634,7 +634,7 @@ export default {
           <p class="text-white text-base leading-7">One of the most important skills as a self-taught developer is to be resourceful. I started with WordPress for fun, and my curiosity led me to my first HTML/CSS site. Working during the day, at night I took courses on SoloLearn and every online platform that could feed my desire to learn.</p>
           <p class="text-white text-base leading-7">I realized then that making websites was what I truly wanted to do, and I decided to attend a programming bootcamp. Through this learning journey that continues to this day, I am happy and I continue to apply the same principles to what has now become my job.</p>
           <div class="pt-4 border-t border-gray-800">
-            <span class="text-pink-500 font-semibold text-xs uppercase tracking-widest">Re-source-ful</span>
+            <span class="text-pink-600 font-semibold text-xs uppercase tracking-widest">Re-source-ful</span>
             <p class="mt-1 text-white text-sm italic">Having the ability to find clever ways to overcome difficulties.</p>
           </div>
         </div>
@@ -664,7 +664,7 @@ export default {
                     :class="activeProject === index ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-pink-500 hover:text-white'"
                   >
                     <div class="flex items-center gap-6">
-                      <span class="text-sm font-mono opacity-40 min-w-[2.5rem]">{{ String(index + 1).padStart(2, '0') }}.</span>
+                      <span class="text-sm font-mono opacity-60 min-w-[2.5rem]">{{ String(index + 1).padStart(2, '0') }}.</span>
                       <h3 class="text-xl sm:text-2xl font-bold tracking-tight">{{ project.name }}</h3>
                     </div>
                     <div class="flex items-center gap-3 flex-shrink-0">
@@ -723,15 +723,15 @@ export default {
           </p>
           <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div class="border-l-2 border-pink-500 pl-5">
-              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Simple</span>
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">Simple</span>
               <p class="text-base leading-7 text-white">No matter what level of web expertise you have, the whole development process will be simple and manageable.</p>
             </div>
             <div class="border-l-2 border-pink-500 pl-5">
-              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Honest</span>
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">Honest</span>
               <p class="text-base leading-7 text-white">I don’t want to lure you with empty promises and hyperbole. Instead, I let the results speak.</p>
             </div>
             <div class="border-l-2 border-pink-500 pl-5">
-              <span class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-3">Committed</span>
+              <span class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-3">Committed</span>
               <p class="text-base leading-7 text-white">I know how important your web presence is, and that’s why I’m committed every day to delivering the best results.</p>
             </div>
           </div>
@@ -744,19 +744,19 @@ export default {
             <p class="text-white text-sm mb-10">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
             <div class="space-y-8">
               <div>
-                <label for="name" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Name / Company</label>
+                <label for="name" class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-2">Name / Company</label>
                 <input v-model="name" type="text" id="name" name="name" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="email" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Email</label>
+                <label for="email" class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-2">Email</label>
                 <input v-model="email" type="email" id="email" name="email" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="subject" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Subject</label>
+                <label for="subject" class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-2">Subject</label>
                 <input v-model="subject" name="subject" id="subject" type="text" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 transition-colors duration-200" required>
               </div>
               <div>
-                <label for="message" class="block text-xs font-mono uppercase tracking-widest text-pink-500 mb-2">Message</label>
+                <label for="message" class="block text-xs font-mono uppercase tracking-widest text-pink-600 mb-2">Message</label>
                 <textarea v-model="message" id="message" name="message" rows="4" class="w-full bg-transparent border-0 border-b border-gray-700 focus:border-pink-500 text-white text-sm outline-none py-2 resize-none transition-colors duration-200" required></textarea>
               </div>
               <div>
