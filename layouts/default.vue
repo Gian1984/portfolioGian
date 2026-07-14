@@ -119,7 +119,9 @@ const footerNavigation = {
 
 
 
-    <slot />
+    <main>
+      <slot />
+    </main>
 
         <footer class="relative bg-white pt-16 sm:pt-24 pb-6">
             <div class="px-4">
