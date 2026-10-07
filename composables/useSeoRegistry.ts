@@ -69,6 +69,7 @@ export const useSeoRegistry = () => ({
       ogTitle: e.title,
       ogDescription: e.description,
       ogImage: e.ogImage,
+      ogImageType: 'image/png',
       ogImageWidth: 1200,
       ogImageHeight: 630,
       ogImageAlt: e.ogImageAlt ?? e.title,

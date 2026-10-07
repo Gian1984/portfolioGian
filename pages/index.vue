@@ -16,6 +16,7 @@ useSeoRegistry().apply('home')
 <script>
 
 import emailjs from '@emailjs/browser';
+import { projects } from '~/data/projects';
 export default {
 
 
@@ -68,111 +69,7 @@ export default {
         },
 
       projects(){
-            return [
-                {
-                  name: 'CodeHelper.me',
-                  role: '100+ privacy-first tools, 800+ curated resources and 400+ public APIs for developers',
-                  imageUrl:'./img/logos/codehelper_logo.webp',
-                  href:'https://codehelper.me/',
-                },
-                {
-                  name: 'Unlistened.me',
-                  role: 'Latest podcasts & music experience',
-                  imageUrl:'./img/logos/unlistened_transparen_logo_176.webp',
-                  href:'https://www.unlistened.me/',
-                },
-                {
-                  name: 'Barnes Brussels',
-                  role: 'Luxury real estate agency in Brussels & Brabant',
-                  imageUrl:'./img/logos/barnes_logo.svg',
-                  href:'https://www.barnes-brussels.com/',
-                },
-                {
-                  name: 'Panoptès',
-                  role: 'Art collection',
-                  imageUrl:'./img/logos/panoptes.webp',
-                  href:'https://www.panoptes.art/',
-                },
-                {
-                    name: 'Claudio Fava',
-                    role: 'Architect',
-                    imageUrl:'./img/logos/logo_fava_border.webp',
-                    href: 'https://www.favaclaudio.com/'
-                },
-                {
-                    name: 'The National Venue Brussels',
-                    role: 'The exclusive event address at the gates of Brussels',
-                    imageUrl:'./img/logos/theNationalVenue_logo-optimized.webp',
-                    href:'https://www.thenationalvenuebrussels.com/',
-                },
-                {
-                    name: 'Artfood',
-                    role: 'Refined catering experiences crafted with authenticity, balance and respect for the environment',
-                    imageUrl:'./img/logos/artfood_traiteur_logo-optimized.webp',
-                    href:'https://www.artfood.be/',
-                },
-                {
-                    name: 'Mancala Travel',
-                    role: 'French-speaking travel specialists for tailor-made trips across Southern Africa',
-                    imageUrl:'./img/logos/mancala_logo_new-optimized.webp',
-                    href:'https://www.mancalatravel.com/',
-                },
-                {
-                    name: 'Brusano',
-                    role: 'Brussels palliative care platform',
-                    imageUrl:'./img/logos/brusano_logo_350px.webp',
-                    href:'https://www.brusano.brussels/',
-                },
-                {
-                    name: 'Pizza Vino',
-                    role: 'Best pizza in BXL',
-                    imageUrl:'./img/logos/pizza-vino-logo.webp',
-                    href:'https://pizzavino.be/',
-                },
-                {
-                    name: 'La Villa In The Sky',
-                    role: 'High-flying fine dining experience in Brussels',
-                    imageUrl:'./img/logos/lavilla.webp',
-                    href:'https://www.lavillainthesky.be/',
-                },
-                {
-                    name: 'Quendra',
-                    role: 'European telecom consulting company',
-                    imageUrl:'./img/logos/quendra.webp',
-                    href:'https://www.quendra.com/',
-                },
-                {
-                  name: 'DistriCare Pharma SRL',
-                  role: 'Belgian group at the service of health',
-                  imageUrl:'./img/logos/districare_logo-optimized.webp',
-                  href:'https://www.districare.be/',
-                },
-                {
-                  name: 'Unikpools',
-                  role: 'Exclusive swimming pool',
-                  imageUrl:'./img/logos/unik.webp',
-                  href:'https://www.unikpools.com/',
-                },
-                {
-                  name: 'Colonel Gustave',
-                  role: 'Healthy and natural food for dogs and cats',
-                  imageUrl:'./img/logos/colonel.webp',
-                  href:'https://www.colonelgustave.com/',
-                },
-                {
-                  name: 'L\'Artigiano della farina',
-                  role: 'Artisan bread and pizza maker',
-                  imageUrl:'./img/logos/logoartigiano.webp',
-                  href:'https://www.artigianodellafarina.be/',
-                },
-                {
-                  name: 'Undiscover.me',
-                  role: 'Make sure your new website shows the best of you',
-                  imageUrl:'./img/logos/undiscoverme.webp',
-                  href:'https://www.undiscover.me/',
-                },
-                // More people...
-            ]
+            return projects
         },
 
         features(){
@@ -210,35 +107,6 @@ export default {
                 },
             ]
 
-        },
-
-        faqs() {
-            return [
-                {
-                    question: 'What web development services do you offer?',
-                    answer: 'I offer end-to-end web development services: responsive brochure websites, e-commerce platforms, custom web applications, and WordPress development. I also handle hosting setup, email configuration, API integrations (Stripe, Google, and more), and ongoing maintenance.'
-                },
-                {
-                    question: 'What technologies do you specialize in?',
-                    answer: 'My core stack is Vue.js, Nuxt.js, PHP and Laravel for full-stack development, with Tailwind CSS and Bootstrap for styling. I also work with WordPress for content-managed sites and have solid experience with HTML5, CSS3, and JavaScript.'
-                },
-                {
-                    question: 'Do you work with clients outside Belgium?',
-                    answer: 'Yes. While I am based in Belgium and work with many clients in Brussels and across Belgium, I regularly collaborate with businesses in Italy and other European countries. All projects can be managed fully remotely.'
-                },
-                {
-                    question: 'How long does it take to build a website?',
-                    answer: 'It depends on the scope. A standard brochure website typically takes 3 to 6 weeks from kickoff to launch. A custom web application or e-commerce platform can take 2 to 4 months. I always provide a clear timeline estimate before starting.'
-                },
-                {
-                    question: 'Can you work on an existing WordPress website?',
-                    answer: 'Yes. I can take over, maintain, redesign or extend an existing WordPress site. Whether it\'s fixing bugs, improving performance, adding new features or migrating to a new theme, I am happy to help.'
-                },
-                {
-                    question: 'How do I get started?',
-                    answer: 'Simply fill in the contact form below or send me an email at gl.tiengo@gmail.com. I\'ll get back to you within 24 hours to schedule a call and understand your project needs.'
-                },
-            ]
         },
 
         staeps(){
@@ -292,7 +160,6 @@ export default {
             turnstileToken: '',
             turnstileWidgetId: null,
             activeProject: null,
-            activeFaq: null,
         }
     },
 
@@ -315,10 +182,6 @@ export default {
     methods: {
         toggleProject(index) {
             this.activeProject = this.activeProject === index ? null : index;
-        },
-
-        toggleFaq(index) {
-            this.activeFaq = this.activeFaq === index ? null : index;
         },
 
         renderTurnstile() {
@@ -454,12 +317,12 @@ export default {
             <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
               <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                 <a
-                    href="img/bioscreen.webp"
+                    href="img/artigianoscreen.webp"
                     data-fancybox="gallery"
-                    aria-label="visit https://www.districare.be/"
-                    data-caption="https://www.districare.be/"
+                    aria-label="visit https://www.artigianodellafarina.be/"
+                    data-caption="https://www.artigianodellafarina.be/"
                 >
-                  <img src="~/assets/bioscreen.webp" alt="Screenshot of the Bioholistic health platform website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
+                  <img src="~/assets/artigianoscreen.webp" alt="Screenshot of the L'Artigiano della farina bakery and pizzeria website" class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
               <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
@@ -474,12 +337,12 @@ export default {
               </div>
               <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                 <a
-                    href="img/colonelscreen.webp"
-                    aria-label="https://www.colonelgustave.com/"
+                    href="img/barnesscreen.webp"
+                    aria-label="visit https://www.barnes-brussels.com/"
                     data-fancybox="gallery"
-                    data-caption="https://www.colonelgustave.com/"
+                    data-caption="https://www.barnes-brussels.com/"
                 >
-                <img src="~/assets/colonelscreen.webp" alt="Screenshot of the Colonel Gustave pet food website" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
+                <img src="~/assets/barnesscreen.webp" alt="Screenshot of the Barnes Brussels luxury real estate website" class="aspect-[4/3] w-[24rem] max-w-none bg-gray-50 object-cover" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -578,12 +441,12 @@ export default {
                   </div>
                   <div class="relative">
                     <a
-                        href="img/undiscoverscreen.webp"
-                        aria-label="visit https://undiscover.me/"
+                        href="img/artfoodscreen.webp"
+                        aria-label="visit https://www.artfood.be/"
                         data-fancybox="gallery2"
-                        data-caption="https://undiscover.me/"
+                        data-caption="https://www.artfood.be/"
                     >
-                      <img src="~/assets/undiscoverscreen.webp" alt="Screenshot of the Undiscover.me personal website platform" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
+                      <img src="~/assets/artfoodscreen.webp" alt="Screenshot of the Artfood catering website on mobile" class=" w-full bg-gray-900/5 object-cover shadow-lg" loading="lazy" />
                     </a>
                     <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                   </div>

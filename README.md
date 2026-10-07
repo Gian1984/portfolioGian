@@ -57,7 +57,7 @@ The site is a single page (`/`) with the following sections:
 - **Kind of** — personal philosophy and approach
 - **At work** — key competencies and working style
 - **Philosophy** — values and methodology
-- **Projects** — showcase of 16+ client projects (CodeHelper.me, Undiscover.me, The National Venue Brussels, Artfood, DistriCare Pharma, etc.)
+- **Projects** — showcase of 15 client projects (CodeHelper.me, The National Venue Brussels, Artfood, DistriCare Pharma, etc.)
 - **Contact** — EmailJS form with Cloudflare Turnstile bot protection
 
 ---
